@@ -10,8 +10,6 @@ import {
 
 
 
-
-
 function InternalCard(props){
     return(
          
@@ -38,11 +36,9 @@ function InternalCard(props){
         href={props.path}
         underline="none"
               sx={{
-                color: "text.primary",
-                textOverflow: "ellipsis",
-                overflow: "hidden",
-                display: "block",
-              }}>
+                color: "text.primary"
+              }}
+              >
         <Typography gutterBottom variant="h5" component="div">
           {props.name}
         </Typography>

@@ -33,15 +33,35 @@ function MapCard(props){
         image={props.image} 
       />
       <CardContent>
+       
 
         <Typography gutterBottom variant="h5" component="div" textAlign={"center"}>
           {props.name}
         </Typography>
+
     
-        <CardActions>
-            <Button size="small" 
-            sx={{color:"black",}}
-            >Learn More</Button>
+        <CardActions sx={{justifyContent: "center"}}>
+            
+            <Button 
+            size="small"
+            sx={{
+              color: "white",
+              backgroundColor: "grey",
+              border: "1px solid grey",
+              borderRadius: "5px",
+              padding: "5px 15px",
+              textTransform: "none",
+              fontSize: "1em",
+              fontWeight: "bold",
+              transition: "background-color 0.3s, color 0.3s",
+              "&:hover": {
+                backgroundColor: "white",
+                color: "black",
+              },
+            }}
+          >
+            Πληροφορίες
+          </Button>
         </CardActions>
       </CardContent>
          
