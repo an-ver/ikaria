@@ -62,15 +62,16 @@
   }
   
   .nav-link {
-    color: rgb(251, 244, 255);
-    text-decoration: none;
-    padding: 10px 20px;
-    transition: background-color 0.3s ease;
-    background-color: transparent;
+      color: rgb(251, 244, 255);
+      text-decoration: none;
+      padding: 10px 20px;
+      transition: background-color 0.3s ease, padding 0.3s ease, font-size 0.3s ease, border-radius 0.3s ease; /* Updated to include border-radius */
+      background-color: transparent;
+      border-radius: 30px; /* Always have border-radius */
   }
   
   .nav-link:hover {
-    background-color: rgba(255, 255, 255, 0.2);
+      background-color: rgba(255, 255, 255, 0.2);
   }
   
   @media screen and (max-width: 768px) {
@@ -98,6 +99,7 @@
   
     .nav-link {
       padding: 15px;
+      border-radius: 40px;
     }
   }
   

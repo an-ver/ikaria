@@ -8,10 +8,6 @@ import {
   
 } from "@mui/material";
 
-
-
-
-
 function InternalCard(props){
     return(
          

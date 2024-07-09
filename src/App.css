@@ -13,7 +13,7 @@
   min-height : 100vh;
 }
 
-.home-heading {
+.home-content .home-heading{
   position: absolute;
   font-family: 'Poppins', sans-serif;
   font-size: 4em;
