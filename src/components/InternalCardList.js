@@ -1,48 +1,61 @@
-import React from 'react';
-import AspectRatio from '@mui/joy/AspectRatio';
-import Box from '@mui/joy/Box';
-import Card from '@mui/joy/Card';
-import CardCover from '@mui/joy/CardCover';
-import { CardContent } from '@mui/joy';
+import React from "react";
+import {
+  Card,
+  CardContent,
+  CardMedia,
+  Typography,
+  Link
+  
+} from "@mui/material";
 
-function intCardList(props){
+
+
+
+
+function InternalCard(props){
     return(
-        <Card
-            variant="plain"
-            sx={{width: 330, bgcolor: 'white',p: 0, 
-            border : "1px solid #ccc", borderRadius: 20,  boxShadow:" 0 2px 4px rgba(0,0,0,0.6)"}}>
-        
-      
-        <Box >
-          <AspectRatio ratio="3/2">
-            <figure>
-              <img src={props.image} alt={props.name} />
-             
-            </figure>
-          </AspectRatio>
-           <CardContent sx={{padding:0}}>
-                {props.description}
-              </CardContent>
-          
-        
-        
+         
+      <Card sx={{ 
+        maxWidth: 300, 
+        border:"1px solid hsl(0, 0%, 80%)",
+        borderRadius:10,
+        boxShadow: "5px 5px 5px hsla(0, 0%, 0%, 0.1)",
+        display:"inline-block",
+        transition: "transform 0.3s ease, box-shadow 0.3s ease",
+        "&:hover": {
+          transform: "scale(1.05)",
+          boxShadow: "0px 8px 16px rgba(0, 0, 0, 0.2)"
+        }
 
-        <CardCover
-          className="gradient-cover"
-          sx={{'&:hover, &:focus-within': {opacity: 1,},
-            opacity: 0,
-            p: 2,
-            transition: '0.2s ease-in',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}>
-            
-    </CardCover>
-  </Box>
+      }}>
+      <CardMedia 
+      sx={{ width:300,
+         height: 300 }} 
+      image={props.image} 
+      />
+      <CardContent>
+        <Link 
+        href={props.path}
+        underline="none"
+              sx={{
+                color: "text.primary",
+                textOverflow: "ellipsis",
+                overflow: "hidden",
+                display: "block",
+              }}>
+        <Typography gutterBottom variant="h5" component="div">
+          {props.name}
+        </Typography>
+        </Link>
+        
+        <Typography variant="body2" color="text.secondary" textAlign = "center">
+          {props.description}
+        </Typography>
+      </CardContent>
+         
+    </Card>
+    );
       
-  </Card>
-      
-  );
+  
 }
-export default intCardList;
+export default InternalCard;

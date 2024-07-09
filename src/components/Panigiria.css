@@ -5,3 +5,14 @@
     background-attachment: fixed;
     padding: 10px 0px 0px 0px;
 }
+
+.panigiria-container .panigiria-cards{
+    position: relative;
+        margin: 0% 0px 0px 0px;
+        padding: 12%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        justify-content: flex-start;
+        z-index: 2;
+}

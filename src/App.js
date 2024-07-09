@@ -7,16 +7,17 @@ import Restaurants from './components/Restaurants';
 import Villages from './components/Villages';
 import Beach from './components/Beaches';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import CardList from './components/CardList';
+import InternalCard from './components/InternalCardList';
 import details from './components/Details'; 
 
 function createCard(details) {
   return (
-    <CardList
+    <InternalCard
       key={details.id}
       image={details.image}
       name={details.name}
       description={details.description}
+      path={details.path}
     />
   );
 }
@@ -25,9 +26,9 @@ function Home() {
   return (
     <div>
       <BackgroundVideo />
-      <div className="content">
-        <h1>Η Ικαρία</h1>
-        <dl className='dictionary'>{details.map(createCard)}</dl>
+      <div className="home-content">
+        <h1 className='home-heading'>Η Ικαρία</h1>
+        <dl className='home-dl-card'>{details.map(createCard)}</dl>
       </div>
     </div>
   );
@@ -36,7 +37,7 @@ function Home() {
 function App() {
   return (
     <BrowserRouter>
-      <div className="App">
+      <div className="home-app">
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />

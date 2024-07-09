@@ -1,11 +1,11 @@
 /* src/App.css */
-.App {
+.home-app{
   padding: 80px 0px 0px 0px;
   position: relative;
   z-index: 1; 
   color: rgb(228, 230, 181); 
 }
-.content {
+.home-content {
   position: relative;
   z-index: 2;
   text-align: center;
@@ -13,7 +13,7 @@
   min-height : 100vh;
 }
 
-h1 {
+.home-heading {
   position: absolute;
   font-family: 'Poppins', sans-serif;
   font-size: 4em;
@@ -25,23 +25,13 @@ h1 {
   border-radius: 10px;
 }
 
-.dictionary {
+.home-content .home-dl-card{
   position: relative;
-  margin: 30% 0px 0px 0px;
+  margin: 35% 0px 0px 0px;
   padding: 12%; 
   display: flex;
   flex-wrap: wrap;
   gap: 40px; 
   justify-content: flex-start; 
-  z-index: 2;
-}
-.internal-dictonary{
-  position: relative;
-  margin: 7% 0px 0px 0px;
-  padding: 12%;
-  display: flex;
-  gap: 22px;
-  flex-wrap: wrap;
-  justify-content: flex-start;
   z-index: 2;
 }
