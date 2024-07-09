@@ -9,8 +9,6 @@ function createMapCard(data){
         key={data.id}
         image={data.image}
         name={data.name}
-
-
     />
   );
 
