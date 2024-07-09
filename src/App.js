@@ -10,6 +10,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import InternalCard from './components/InternalCardList';
 import details from './components/Details'; 
 
+
 function createCard(details) {
   return (
     <InternalCard
@@ -21,6 +22,8 @@ function createCard(details) {
     />
   );
 }
+
+
 
 function Home() {
   return (

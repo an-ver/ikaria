@@ -1,24 +1,28 @@
 import React from 'react';
-import InternalCard from './InternalCardList';
-import panigiriaData from './panigiriaData';
 import './Panigiria.css';
+import data from "./panigiriaData";
+import MapCard from './MapCard';
 
-function createCard(panigiriaData){
-  return( 
-    <InternalCard
-        key= {panigiriaData.id}
-        image={panigiriaData.image}
-        name={panigiriaData.name}
-        description={panigiriaData.description}
+function createMapCard(data){
+  return(
+    <MapCard 
+        key={data.id}
+        image={data.image}
+        name={data.name}
+
+
     />
-    );
+  );
+
 }
 
 function Panigiria() {
     return (
         <div className='panigiria-container'>
-            <h1>Τα Πανηγύρια</h1>
-            <dl className='panigiria-cards'>{panigiriaData.map(createCard)}</dl>
+            <h1 className='panigiria-heading'>Τα Πανηγύρια</h1>
+            <p className='panigiria-paragraph'>Τα πανηγύρια αποτελούν κορυφαία έκφραση γλεντιού των ικαριακών κοινοτήτων και σημαντικό πλαίσιο για πλήθος άλλων πολιτισμικών εκφράσεων, όπως μουσικοχορευτικές επιτελέσεις, τελετουργίες, εθιμικές παραδόσεις, παραγωγικές και ανταλλακτικές πρακτικές. Αποτελούν, επιπλέον, σημαντικό πλαίσιο για την ανανέωση συγγενικών και φιλικών δεσμών ανάμεσα σε άτομα, οικογένειες και χωριά, καθώς και για την επιτέλεση των τοπικών ταυτοτήτων. 
+                Ιστορικά, έχουν συμβάλει στη βελτίωση των όρων ζωής των κοινοτήτων μέσω της υλοποίησης κοινωφελών έργων.</p>
+            <dl className='panigiria-cards'>{data.map(createMapCard)}</dl>
         </div>
     );
 }
