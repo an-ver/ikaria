@@ -1,9 +1,10 @@
 import React from 'react';
+import './Restaurants.css';
 
 function Reastaurants() {
     return (
-        <div>
-            <p>Reastaurants.</p>
+        <div className='restaurant-container'>
+            <h1>Τα Εστιατόρια</h1>
         </div>
     );
 }

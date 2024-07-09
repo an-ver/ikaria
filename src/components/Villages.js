@@ -3,7 +3,7 @@ import React from 'react';
 function Villages() {
     return (
         <div>
-            <p>Villages..</p>
+            <h1>Τα Χωριά</h1>
         </div>
     );
 }

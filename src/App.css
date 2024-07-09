@@ -5,7 +5,6 @@
   z-index: 1; 
   color: rgb(228, 230, 181); 
 }
-
 .content {
   position: relative;
   z-index: 2;
@@ -14,21 +13,35 @@
   min-height : 100vh;
 }
 
-p {
-  position: absolute;
-  padding: 20px;
-  text-align: center;
-  font-family: 'Poppins', sans-serif;
-  font-size: 1.5em;
-  font-weight: 500;
-  color: rgb(228, 230, 181);
-  bottom: 0;
-}
-
 h1 {
   position: absolute;
   font-family: 'Poppins', sans-serif;
   font-size: 4em;
+  margin-left: 30px;
   font-weight: 700;
-  color: rgb(228, 230, 181);
+  color: rgb(14, 42, 68); 
+  background-color: rgba(255, 255, 255, 0.5); 
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.dictionary {
+  position: relative;
+  margin: 30% 0px 0px 0px;
+  padding: 12%; 
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px; 
+  justify-content: flex-start; 
+  z-index: 2;
+}
+.internal-dictonary{
+  position: relative;
+  margin: 7% 0px 0px 0px;
+  padding: 12%;
+  display: flex;
+  gap: 22px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  z-index: 2;
 }

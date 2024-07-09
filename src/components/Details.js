@@ -3,7 +3,7 @@
 import village from "../assets/images/xwria.jpg"
 import beach from "../assets/images/seychelles-ikaria.jpg"
 import pan from "../assets/images/panigiria.jpg"
-import restaurant from "../assets/images/est.jpg"
+import restaurant from "../assets/images/estiatorio2.jpg"
 
 
 const details=[
