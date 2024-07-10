@@ -1,16 +1,14 @@
 // src/api.js
 import axios from 'axios';
 
-const api = axios.create({
-  baseURL: 'http://192.168.1.214:1337/admin/plugins/content-type-builder/content-types/api::place.place', 
-});
+const PORT = 1337;
+const url = `http://192.168.1.173:${PORT}`;
+const GET_DATA = 'places';
 
-export const getDetails = async () => {
-  try {
-    const response = await api.get('/details'); 
-    return response.data;
-  } catch (error) {
-    console.error('Error fetching details:', error);
-    throw error;
-  }
-};
+export async function getQuery() {
+  //const query = `http://${url}:${PORT}/api/places?/publicationState=preview&populate[1]=` + GET_DATA;
+  const query = `http://192.168.1.173:1337/api/places?/publicationState=preview&populate[1]=Description,Name,picture&populate[2]=picture.image`;
+  const response = await axios.get(query);
+  console.log('Fetched data: ', response.data.data);
+  return response.data.data;
+}

@@ -2,7 +2,6 @@ import React from 'react';
 import './Panigiria.css';
 import data from "./panigiriaData";
 import MapCard from './MapCard';
-
 function createMapCard(data){
   return(
     <MapCard 
@@ -11,7 +10,6 @@ function createMapCard(data){
         name={data.name}
     />
   );
-
 }
 
 function Panigiria() {
