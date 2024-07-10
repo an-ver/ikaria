@@ -28,11 +28,10 @@
 
 .panigiria-container .panigiria-cards{
     position: relative;
-        margin: 0% 0px 0px 0px;
+        margin: 10% 0px 0px 0px;
         padding: 5%;
         display: flex;
         flex-wrap: wrap;
         gap: 40px;
-        justify-content: flex-start;
         z-index: 2;
 }

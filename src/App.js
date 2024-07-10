@@ -7,13 +7,13 @@ import Restaurants from './components/Restaurants';
 import Villages from './components/Villages';
 import Beach from './components/Beaches';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import InternalCard from './components/InternalCardList';
+import CardList from './components/CardList';
 import details from './components/Details'; 
 
 
 function createCard(details) {
   return (
-    <InternalCard
+    <CardList
       key={details.id}
       image={details.image}
       name={details.name}

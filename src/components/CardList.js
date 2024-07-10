@@ -10,7 +10,7 @@ import {
 
 
 
-function InternalCard(props){
+function CardList(props){
     return(
          
       <Card sx={{ 
@@ -54,4 +54,4 @@ function InternalCard(props){
       
   
 }
-export default InternalCard;
+export default CardList;
