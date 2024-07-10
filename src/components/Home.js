@@ -1,11 +1,11 @@
 import React from 'react';
 import BackgroundVideo from './BackgroundVideo';
-import InternalCard from './InternalCardList';
+import CardList from './CardList';
 import details from './Details';
 
 function createCard(details) {
   return (
-    <InternalCard
+    <CardList
       key={details.id}
       image={details.image}
       name={details.name}

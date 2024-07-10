@@ -20,9 +20,9 @@
     font-size: 20px;
     line-height: 28px;
     margin: 0.5em 0;
-    font-family: 'PFRegalDisplayProMedium', serif;
+    font-family: serif;
     max-width: 800px;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    /* text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); */
 
 }
 .beaches-container .beaches-paragraph{
@@ -30,9 +30,9 @@
     font-size: 20px;
     line-height: 28px;
     margin: 0.5em 0;
-    font-family: 'PFRegalDisplayProMedium', serif;
+    font-family: serif;
     max-width: 800px;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    /* text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); */
 }
 .beaches-container .beaches-content {
     max-width: 800px;
