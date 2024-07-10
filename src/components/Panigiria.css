@@ -16,8 +16,9 @@
 }
 
 .panigiria-container .panigiria-paragraph{
+    display: flex;
     color: black;
-    padding: 10%;
+    padding: 7%;
     margin-top: 0px;
     background-color: rgba(255, 255, 255, 0.5);
     height: 2px;
@@ -28,11 +29,11 @@
 
 .panigiria-container .panigiria-cards{
     position: relative;
-        margin: 0% 0px 0px 0px;
-        padding: 5%;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 40px;
-        justify-content: flex-start;
-        z-index: 2;
+    margin: 0% 0px 0px 0px;
+    padding: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: flex-start;
+    z-index: 2;
 }
