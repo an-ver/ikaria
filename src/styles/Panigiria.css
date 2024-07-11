@@ -29,7 +29,7 @@
       
 }
 
-.panigiria-container .panigiria-cards{
+.panigiria-container .panigiria-card{
     margin: 20px 0;
     padding: 20px;
     display: flex;
@@ -51,3 +51,5 @@
         /* Adjust width for smallest screens */
     }
 }
+
+
