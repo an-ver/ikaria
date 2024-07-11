@@ -1,22 +1,12 @@
 import BackgroundVideo from './BackgroundVideo';
-import InternalCard from './InternalCardList';
 import './Home.css';
+import CreateCard from './CreateCard';
 import { useEffect, useState } from 'react';
 import {getQuery} from './api.js';
 
-function createCard(data) {
-  return (
-    
-    <InternalCard
-      key={data.id}
-      image={data.attributes.picture.url}
-      Name={data.attributes.Name}
-      Description={data.attributes.Description}
-    />
-  );
-}
 
 function Home() {
+  
   const [data, setData] = useState([]);  
   const [isLoading, setIsLoading] = useState(true);
 
@@ -39,7 +29,10 @@ function Home() {
       <BackgroundVideo />
       <div className="home-content">
         <h1 className='home-heading'>Η Ικαρία</h1>
-        <dl className='home-dl-card'>{data.map(createCard)}</dl>
+        <dl className='home-dl-card'>
+          {data && data.filter(item => item.id >= 2 && item.id <= 5)
+            .map(item => <CreateCard key={item.id} data={item}/>)}
+        </dl>
       </div>
     </div>
   );
