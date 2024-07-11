@@ -1,0 +1,55 @@
+.panigiria-container{
+    background-image: url('../assets/images/panigiria-back.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 20px 10px;       
+    color: #0E2A44;
+    flex-direction: column;
+}
+.panigiria-container .panigiria-heading{
+    font-family: 'Poppins', sans-serif;
+    font-size: 3em;
+    font-weight: 500;
+    color: rgb(14, 42, 68);
+    padding: 10px 20px;
+    margin: 20px 0;
+    z-index: 2;
+}
+
+.panigiria-container .panigiria-paragraph{
+        display: flex;
+        color: black;
+        padding: 20px;
+        margin: 20px 0;
+        font-size: 1.2em;
+        line-height: 1.5;
+        max-width: 800px;
+        text-align: justify;
+      
+}
+
+.panigiria-container .panigiria-card{
+    margin: 20px 0;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    z-index: 2;
+}
+@media (max-width: 768px) {
+    .panigiria-container .panigiria-card {
+        width: calc(50% - 20px);
+        /* Adjust width for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .panigiria-container .panigiria-card {
+        width: 100%;
+        /* Adjust width for smallest screens */
+    }
+}
+
+

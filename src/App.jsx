@@ -1,12 +1,12 @@
-import React from 'react';
-import './App.css';
-import Navbar from './components/Navbar';
-import Panigiria from './components/Panigiria';
-import Restaurants from './components/Restaurants';
-import Villages from './components/Villages';
-import Beach from './components/Beaches';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Home from './components/Home'; 
+import React from "react";
+import "./App.css";
+import Navbar from "./components/Navbar";
+import Panigiria from "./components/Panigiria";
+import Restaurants from "./components/Restaurants";
+import Villages from "./components/Villages";
+import Beach from "./components/Beaches";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./components/Home";
 
 function App() {
   return (

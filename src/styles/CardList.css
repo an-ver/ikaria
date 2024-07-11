@@ -1,0 +1,52 @@
+/* Card Styling */
+.card-list {
+    max-width: 300px;
+    border: 1px solid hsl(0, 0%, 80%);
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px hsla(0, 0%, 0%, 0.1);
+    display: inline-block;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    /* Ensures content does not overflow */
+}
+
+.card-list:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Card Media Styling */
+.card-list .card-list-media {
+    width: 300px;
+    height: 300px;
+}
+
+/* Card Content Styling */
+.card-list .card-list-media .card-list-content {
+    padding: 16px;
+}
+
+/* Typography Styling for Link */
+.card-list .card-list-media .card-list-content .card-list-link {
+    text-decoration: none;
+    /* Removes underline from the link */
+    color: inherit;
+    /* Inherit text color from parent */
+}
+
+/* Typography Styling */
+.card-list .card-list-media .card-list-content .card-list-title {
+    font-size: 1.25rem;
+    /* Equivalent to `h5` */
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+/* Typography Styling for Description */
+.card-list-description {
+    font-size: 0.875rem;
+    /* Equivalent to `body2` */
+    color: #6c757d;
+    /* Using a color similar to 'text.secondary' */
+    text-align: center;
+}

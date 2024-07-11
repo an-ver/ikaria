@@ -1,6 +1,6 @@
-import React from 'react';
-import './BackgroundVideo.css';
-import backgroundVideo from '../assets/video/ikaria_drone.mp4'; 
+import React from "react";
+import "../styles/BackgroundVideo.css";
+import backgroundVideo from "../assets/video/ikaria_drone.mp4";
 
 const BackgroundVideo = () => {
   return (
