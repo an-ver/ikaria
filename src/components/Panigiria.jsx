@@ -24,9 +24,9 @@ function Panigiria() {
         .catch((error) => console.log(error));
     }, []);
     return (
-        <div className='container'>
-            <h1 className='heading'>Τα Πανηγύρια</h1>
-            <dl className='cards'>
+        <div className='panigiria-container'>
+            <h1 className='panigiria-heading'>Τα Πανηγύρια</h1>
+            <dl className='panigiria-cards'>
                 {data && data.filter(item => item.id >= 6 && item.id <= 8)
             .map(item => <CreateMapCard key={item.id} data={item}/>)}</dl>
         </div>
