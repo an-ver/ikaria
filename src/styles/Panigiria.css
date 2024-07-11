@@ -97,7 +97,8 @@
 
  /* Button Styling */
  .panigiria-cards .map-card .map-card-content .map-card-actions .map-card-button {
-     color: white;
+    
+    color: white;
      background-color: rgb(85, 85, 85);
      border: 1px solid grey;
      border-radius: 5px;
