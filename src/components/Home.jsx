@@ -4,7 +4,6 @@ import CreateCard from "./CreateCard";
 import { useEffect, useState } from "react";
 import { getQuery } from "./api";
 import CardList from "./CardList";
-import details from "./Details";
 
 function Home() {
   const [data, setData] = useState([]);
