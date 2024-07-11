@@ -8,22 +8,13 @@ import {
   CardActions,
   Button,
 } from "@mui/material";
-import "../styles/MapCard.css";
 
 function MapCard(props) {
   return (
     <Card className="map-card">
       <CardMedia className="map-card-media" image={props.image} />
       <CardContent className="map-card-content">
-        <Typography
-          className="map-card-title"
-          gutterBottom
-          variant="h5"
-          component="div"
-          textAlign={"center"}
-        >
-          {props.name}
-        </Typography>
+        <Typography className="map-card-title">{props.name}</Typography>
 
         <CardActions className="map-card-actions">
           <Button className="map-card-button">Πληροφορίες</Button>

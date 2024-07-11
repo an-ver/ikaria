@@ -29,7 +29,7 @@
       
 }
 
-.panigiria-container .panigiria-card{
+.panigiria-container .panigiria-cards{
     margin: 20px 0;
     padding: 20px;
     display: flex;
@@ -53,3 +53,62 @@
 }
 
 
+ .panigiria-cards .map-card {
+     max-width: 300px;
+     border: 1px solid hsl(0, 0%, 80%);
+     border-radius: 50px;
+     box-shadow: 5px 5px 5px hsla(0, 0%, 0%, 0.1);
+     display: inline-block;
+     cursor: pointer;
+     transition: border-color 0.3s ease,
+         box-shadow 0.3s ease;
+     overflow: hidden;
+ }
+
+ .panigiria-cards .map-card:hover {
+     transform: scale(1.05);
+     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+ }
+
+ /* Card Media Styling */
+ .panigiria-cards .map-card .map-card-media {
+     width: 300px;
+     height: 300px;
+ }
+
+ /* Card Content Styling */
+ .panigiria-cards .map-card .map-card-content {
+     padding: 16px;
+ }
+
+ /* Typography Styling */
+ .panigiria-cards .map-card .map-card-content .map-card-title {
+     text-align: center;
+     font-size: 1.25rem;
+     /* Equivalent to `h5` */
+     margin-bottom: 16px;
+ }
+
+ /* Card Actions Styling */
+ .panigiria-cards .map-card .map-card-content .map-card-actions {
+     display: flex;
+     justify-content: center;
+ }
+
+ /* Button Styling */
+ .panigiria-cards .map-card .map-card-content .map-card-actions .map-card-button {
+     color: white;
+     background-color: rgb(85, 85, 85);
+     border: 1px solid grey;
+     border-radius: 5px;
+     padding: 5px 15px;
+     text-transform: none;
+     font-size: 1em;
+     font-weight: bold;
+     transition: background-color 0.3s ease;
+ }
+
+ .panigiria-cards .map-card .map-card-content .map-card-actions .map-card-button:hover {
+     background-color: white;
+     color: black;
+ }
