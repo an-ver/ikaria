@@ -1,20 +1,10 @@
-import BackgroundVideo from "./BackgroundVideo.jsx";
-import CardList from "./CardList.jsx";
-import details from "./Details.jsx";
-import { useState, useEffect } from "react";
-import { getQuery } from "./api.jsx";
-
-function createCard(data) {
-  return (
-    <CardList
-      key={details.id}
-      image={details.image}
-      name={details.name}
-      description={details.description}
-      path={details.path}
-    />
-  );
-}
+import BackgroundVideo from "./BackgroundVideo";
+import "../styles/Home.css";
+import CreateCard from "./CreateCard";
+import { useEffect, useState } from "react";
+import { getQuery } from "./api";
+import CardList from "./CardList";
+import details from "./Details";
 
 function Home() {
   const [data, setData] = useState([]);
@@ -39,7 +29,12 @@ function Home() {
       <BackgroundVideo />
       <div className="home-content">
         <h1 className="home-heading">Η Ικαρία</h1>
-        <dl className="home-dl-card">{data.map(createCard)}</dl>
+        <dl className="home-dl-card">
+          {data &&
+            data
+              .filter((item) => item.id >= 2 && item.id <= 5)
+              .map((item) => <CreateCard key={item.id} data={item} />)}
+        </dl>
       </div>
     </div>
   );
