@@ -28,12 +28,12 @@ function Home() {
       <BackgroundVideo />
       <div className="home-content">
         <h1 className="home-heading">Η Ικαρία</h1>
-        <dl className="home-dl-card">
+        <div className="home-dl-card">
           {data &&
             data
               .filter((item) => item.id >= 2 && item.id <= 5)
               .map((item) => <CreateCard key={item.id} data={item} />)}
-        </dl>
+        </div>
       </div>
     </div>
   );
