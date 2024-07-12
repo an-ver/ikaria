@@ -33,11 +33,16 @@ const Navbar = () => {
         </button>
         <ul className={`nav-menu ${isOpen ? "active" : ""}`}>
           <li className="nav-item">
+            <button className="nav-link" onClick={() => navigateTo("/")}>
+              Home
+            </button>
+          </li>
+          <li className="nav-item">
             <button
               className="nav-link"
               onClick={() => navigateTo("/panigiria")}
             >
-              Τα Πανιγύρια
+              Feasts
             </button>
           </li>
           <li className="nav-item">
@@ -45,7 +50,7 @@ const Navbar = () => {
               className="nav-link"
               onClick={() => navigateTo("/paralies")}
             >
-              Οι Παραλίες
+              Beaches
             </button>
           </li>
           <li className="nav-item">
@@ -53,12 +58,12 @@ const Navbar = () => {
               className="nav-link"
               onClick={() => navigateTo("/estiatoria")}
             >
-              Τα Εστιατόρια
+              Restaurants
             </button>
           </li>
           <li className="nav-item">
             <button className="nav-link" onClick={() => navigateTo("/xwria")}>
-              Τα Χωριά
+              Villages
             </button>
           </li>
         </ul>

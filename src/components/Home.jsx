@@ -27,8 +27,12 @@ function Home() {
     <div>
       <BackgroundVideo />
       <div className="home-content">
-        <h1 className="home-heading">Η Ικαρία</h1>
+        <h1 className="home-heading">Καλως ήρθατε στην Ικαρία</h1>
+
         <div className="home-dl-card">
+          <h2 className="welcome-heading">
+            Προγραμματίστε το επόμενο ταξίδι σας και ανακαλύψτε
+          </h2>
           {data &&
             data
               .filter((item) => item.id >= 2 && item.id <= 5)
