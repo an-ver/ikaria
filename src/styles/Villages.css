@@ -3,65 +3,62 @@
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    padding: 20px 10px;
-    color: #0E2A44;
+    padding: 20px;
+    color: #ffffff;
     flex-direction: column;
+    min-height: 100vh;
+    width: 100vw;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
-.villages-container .villages-heading {
+.villages-description {
     font-family: 'Poppins', sans-serif;
-    font-size: 3em;
-    font-weight: 500;
-    color: rgb(14, 42, 68);
-    padding: 10px 20px;
-    margin: 20px 0;
-    z-index: 2;
-}
-
-.villages-container .villages-paragraph {
-    display: flex;
-    color: black;
-    padding: 20px;
-    margin: 20px 0;
     font-size: 1.2em;
-    line-height: 1.5;
-    max-width: 800px;
-    text-align: justify;
-
+    text-align: center;
+    font-weight: 500;
+    color: rgb(226, 213, 202);
+    padding: 50px 50px;
+    margin: 70px 0;
+    z-index: 2;
+    background-color: rgba(122, 94, 16, 0.5); 
 }
 
-.villages-container .villages-card {
-    margin: 20px 0;
-    padding: 20px;
+.villages-container .villages-cards{
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 10%;
     justify-content: center;
     z-index: 2;
 }
 
 @media (max-width: 768px) {
-    .container .card {
+    .villages-container .villages-cards {
         width: calc(50% - 20px);
     }
 }
 
 @media (max-width: 480px) {
-    .container .card {
+    .villages-container .villages-cards {
         width: 100%;
     }
 }
 
 .villages-cards .map-card {
     max-width: 300px;
-    border: 1px solid hsl(0, 0%, 80%);
-    border-radius: 50px;
-    box-shadow: 5px 5px 5px hsla(0, 0%, 0%, 0.1);
-    display: inline-block;
+    max-height: 500px;
+    border: 1px solid hsl(183, 61%, 83%);
+    border-radius: 40px;
+    box-shadow: 5px 5px 5px hsla(55, 6%, 39%, 0.5);
+    display: flex;
+    flex-direction: column;
     cursor: pointer;
-    transition: border-color 0.3s ease,
-        box-shadow 0.3s ease;
     overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+       
 }
 
 .villages-cards .map-card:hover {
@@ -75,7 +72,9 @@
 }
 
 .villages-cards .map-card .map-card-content {
+    flex-grow: 1;
     padding: 16px;
+    color: rgb(0, 0, 0);
 }
 
 .villages-cards .map-card .map-card-content .map-card-title {
@@ -87,11 +86,12 @@
 .villages-cards .map-card .map-card-content .map-card-actions {
     display: flex;
     justify-content: center;
+    margin-top: auto;
 }
 
 .villages-cards .map-card .map-card-content .map-card-actions .map-card-button {
-
-    color: white;
+    position: relative;
+    color: rgb(230, 233, 217);
     background-color: rgb(85, 85, 85);
     border: 1px solid grey;
     border-radius: 5px;
@@ -99,10 +99,15 @@
     text-transform: none;
     font-size: 1em;
     font-weight: bold;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.8s ease;
+    
 }
 
 .villages-cards .map-card .map-card-content .map-card-actions .map-card-button:hover {
     background-color: white;
-    color: black;
+    color: rgb(0, 0, 0);
+}
+
+.villages-cards .map-card:nth-child(-n+4) {
+    margin-bottom: 10%; 
 }

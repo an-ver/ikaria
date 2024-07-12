@@ -3,38 +3,35 @@
     height: 100vh;
     background-image: url('../assets/images/beaches-back.png'); 
     background-size: cover;
-    background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
     text-align: center;
-    color: white;
-    padding: 20px;
     box-sizing: border-box;
 }
 
-.beaches-container .beaches-heading{
-    color: #000000;
-    font-size: 20px;
-    line-height: 28px;
-    margin: 0.5em 0;
-    font-family: serif;
-    max-width: 800px;
-    /* text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); */
 
-}
-.beaches-container .beaches-paragraph{
-    color: #000000;
+.beaches-description{
+    color: #030303;
     font-size: 20px;
     line-height: 28px;
     margin: 0.5em 0;
     font-family: serif;
     max-width: 800px;
-    /* text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); */
 }
 .beaches-container .beaches-content {
     max-width: 800px;
     padding: 10px 20px;
+}
+
+.beaches-slider-container {
+    width: 50%;
+    height: 50%;
+}
+
+.beaches-slider-container2 {
+    width: 50%;
+    height: 50%;
+    margin-left: 50%;
+    margin-bottom: 50%;
 }

@@ -5,12 +5,11 @@ function CardList(props) {
   return (
     <Card
       className="card-list"
-      //   style={{ border: "1px solid hsl(0, 0%, 80%)", borderRadius: "20px" }}
-      //
     >
       <CardMedia className="card-list-media " image={props.image} />
       <CardContent className=".card-list-content">
         <Link className="card-list-link" href={props.path}>
+          <Typography variant="h5" component="div">
             {props.name}
           </Typography>
         </Link>

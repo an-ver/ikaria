@@ -24,12 +24,15 @@ function Villages() {
   }, []);
   return (
     <div className='villages-container'>
-            <h1 className='villages-heading'>Τα Χωριά</h1>
+            <p className="villages-description"> Παλιά αρχοντικά, γραφικά στενά σοκάκια, 
+                παραθαλάσσια ψαροχώρια, ορεινά χωριά χαμένα στο χρόνο και κρυμμένα καταπράσινα ποτάμια..
+                </p>
             <dl className='villages-cards'>
-                {data && data.filter(item => item.id >= 16 && item.id <= 22)
+                {data && data.filter(item => item.id >= 16 && item.id <= 23)
             .map(item => <CreateMapCard key={item.id} data={item}/>)}</dl>
         </div>
   );
+
 }
 
 export default Villages;

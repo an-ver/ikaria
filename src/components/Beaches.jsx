@@ -16,20 +16,17 @@ function Beach() {
   return (
     <>
       <div className="beaches-container">
-        <h1 className="beaches-heading">Οι Παραλίες</h1>
-        <p className="beaches-paragraph">
+        <div className="beaches-slider-container">
+          <ImageSlider imageUrls={IMAGES} />
+        </div>
+        <div className="beaches-slider-container2">
+          <ImageSlider imageUrls={IMAGES} />
+        </div>
+        <div>
+          <p className="beaches-description">
           Απίστευτες παραλίες, με απέραντες αμμουδιές ή βότσαλα και με θερμές
           πηγές, ιδανικές για στιγμές απόλυτης χαλάρωσης.
         </p>
-        <div
-          style={{
-            maxWidth: "800px",
-            width: "100%",
-            aspectRatio: "3/2",
-            margin: "0 auto",
-          }}
-        >
-          <ImageSlider imageUrls={IMAGES} />
         </div>
       </div>
     </>

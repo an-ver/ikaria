@@ -15,10 +15,7 @@
     cursor: pointer;
     transition: background-color 1ms ease-in-out;
 }
-/* .img-slider-btn:hover{
-    background-color: rgba(0, 0, 0, 0.2);
-   
-} */
+
 .img-slider-btn > *{
     stroke: white;
     fill: black;

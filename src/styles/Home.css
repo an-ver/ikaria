@@ -1,4 +1,3 @@
-/* Home page specific styles */
 .home-content .home-heading {
     position: absolute;
     font-family: 'Poppins', sans-serif;
@@ -37,29 +36,22 @@
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* Card Media Styling */
 .home-dl-card .card-list .card-list-media {
     width: 300px;
     height: 300px;
-
 }
 
-/* Card Content Styling */
 .home-dl-card .card-list .card-list-media .card-list-content {
     padding: 16px;
 }
 
-/* Typography Styling for Link */
 .home-dl-card .card-list .card-list-media .card-list-content .card-list-link {
     text-decoration: none;
-    /* Removes underline from the link */
     color: inherit;
-    /* Inherit text color from parent */
 }
 
 .home-dl-card .card-list .card-list-media .card-list-content .card-list-title {
     font-size: 1.25rem;
-    /* Equivalent to `h5` */
     margin-bottom: 16px;
     text-align: center;
 }
