@@ -1,22 +1,39 @@
 .home-content .home-heading {
+    margin-top: 800px;
+    left: 10px; 
     position: absolute;
-    font-family: 'Poppins', sans-serif;
-    font-size: 4em;
-    margin-left: 30px;
-    font-weight: 700;
-    color: rgb(14, 42, 68);
-    background-color: rgba(255, 255, 255, 0.5);
+    font-family: effra, cursive;
+  
+    font-optical-sizing: auto; 
+    font-weight: 500;
+    font-style: oblique;
+    font-size: 80px;
+    line-height: 1.2em;
+    color: rgb(255, 255, 255);
     padding: 10px;
-    border-radius: 10px;
+    text-shadow: 0.08em 0.08em 0.08em rgba(0, 0, 0, 0.4);}
+
+.home-content .welcome-heading{
+    position: absolute;
+    text-align: center;
+    top:100px;
+    font-family: effra, cursive;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: oblique;
+    font-size: 50px;
+    line-height: 1.2em;
+    text-shadow: 0.08em 0.08em 0.08em rgba(0, 0, 0, 0.4);
+        
 }
 
 .home-content .home-dl-card {
-    position: relative;
-    margin: 35% 0px 0px 0px;
-    padding: 12%;
+    position: absolute;
+    margin: 1000px 0px 0px 0px;
+    padding: 14%;
     display: flex;
     flex-wrap: wrap;
-    gap: 40px;
+    gap: 50px;
     justify-content: flex-start;
     z-index: 2;
 }
@@ -29,8 +46,7 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 
 }
-
-.home-dl-card .card-list:hover {
+ .home-dl-card .card-list:hover {
     cursor: pointer;
     transform: scale(1.05);
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
@@ -43,6 +59,7 @@
 
 .home-dl-card .card-list .card-list-media .card-list-content {
     padding: 16px;
+    
 }
 
 .home-dl-card .card-list .card-list-media .card-list-content .card-list-link {
