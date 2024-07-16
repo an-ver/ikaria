@@ -1,27 +1,37 @@
 import React from "react";
+import { useNavigate } from "react-router-dom"; 
+
 import {
   Card,
   CardContent,
   CardMedia,
   Typography,
-  Link,
   CardActions,
-  Button,
+  Button
 } from "@mui/material";
 
-function MapCard(props) {
-  return (
-    <Card className="map-card">
-      <CardMedia className="map-card-media" image={props.image} />
-      <CardContent className="map-card-content">
-        <Typography className="map-card-title">{props.name}</Typography>
 
-        <CardActions className="map-card-actions">
-          <Button className="map-card-button">Πληροφορίες</Button>
-        </CardActions>
-      </CardContent>
-    </Card>
+function MapCard(props) {
+  const navigate = useNavigate(); 
+
+  const handleInfoClick = () => {
+    navigate(`/Info`); 
+  };
+  return (
+    <>
+      <Card className="map-card">
+        <CardMedia className="map-card-media" image={props.image} />
+        <CardContent className="map-card-content">
+          <Typography className="map-card-title">{props.name}</Typography>
+          <CardActions className="map-card-actions">
+              <Button onClick={handleInfoClick} className="map-card-button">Πληροφορίες</Button>
+          </CardActions>
+        </CardContent>
+      </Card>
+    </>
   );
 }
 
 export default MapCard;
+
+
