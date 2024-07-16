@@ -35,16 +35,15 @@ function getIcon(name) {
       return null;
   }
 }
+
 function CardList(props) {
   return (
-    <Card
-      className="card-list"
-    >
+    <Card className="card-list">
       <CardMedia className="card-list-media " image={props.image} />
       <CardContent className="card-list-content">
         <Box display="flex" flexDirection="column" alignItems="center">
           <Box className="icon-box">{getIcon(props.name)}</Box>
-          <Link className="card-list-link" href={props.path} underline="none">
+          <Link className="card-list-link" href={"/home"} underline="none">
             <Typography
               gutterBottom
               variant="h4"
