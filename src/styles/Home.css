@@ -58,7 +58,6 @@
 .home-dl-card .card-list-media {
     width: 300px;
     height: 300px;
-
 }
 
 /* Card Content Styling */
@@ -70,9 +69,7 @@
 /* Typography Styling for Link */
 .home-dl-card  .card-list-link {
     text-decoration: none;
-    /* Removes underline from the link */
     color: inherit;
-    /* Inherit text color from parent */
 }
 
 @media (max-width: 768px) {

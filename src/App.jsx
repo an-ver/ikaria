@@ -4,9 +4,10 @@ import Navbar from "./components/Navbar";
 import Panigiria from "./components/Panigiria";
 import Restaurants from "./components/Restaurants";
 import Villages from "./components/Villages";
-import Beach from "./components/Beaches";
+import Beaches from "./components/Beaches";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./components/Home";
+import Info from "./components/Info";
 
 function App() {
   return (
@@ -17,9 +18,10 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/panigiria" element={<Panigiria />} />
-          <Route path="/paralies" element={<Beach />} />
+          <Route path="/paralies" element={<Beaches />} />
           <Route path="/estiatoria" element={<Restaurants />} />
           <Route path="/xwria" element={<Villages />} />
+          <Route path="/Info" element={<Info />} />     
         </Routes>
       </div>
     </BrowserRouter>
