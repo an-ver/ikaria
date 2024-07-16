@@ -12,7 +12,7 @@ const Navbar = () => {
   };
 
   const navigateTo = (path) => {
-    setIsOpen(false); // Close the menu after navigation
+    setIsOpen(false); 
     navigate(path);
   };
 
