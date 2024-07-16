@@ -14,14 +14,13 @@ function App() {
     <BrowserRouter>
       <div className="home-app">
         <Navbar />
-
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/panigiria" element={<Panigiria />} />
           <Route path="/paralies" element={<Beaches />} />
           <Route path="/estiatoria" element={<Restaurants />} />
           <Route path="/xwria" element={<Villages />} />
-          <Route path="/Info" element={<Info />} />     
+          <Route path="/info/:id" element={<Info />} /> {/* Update this route */}
         </Routes>
       </div>
     </BrowserRouter>

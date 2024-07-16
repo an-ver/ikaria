@@ -1,51 +1,51 @@
+import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 import '../styles/Info.css';
-import React, { useState } from 'react';
-import FetchData from './FetchData.jsx';
+import { getQuery } from './api.jsx'; 
 
 function Info() {
-  const { data, isLoading } = FetchData();
-  const [selectedItem, setSelectedItem] = useState(null);
+  const { id } = useParams();
+  const [data, setData] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
 
-  // Assuming `handleClick` is defined in the same component
-  // This function remains unchanged as it's not directly causing the issue
-  const handleClick = (id) => {
-    const item = data.find(item => item.id === id);
-    setSelectedItem(item);
-  };
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const result = await getQuery();
+        const item = result.find(item => item.id === parseInt(id));
+        setData(item);
+      } catch (error) {
+        console.error(error);
+      } finally {
+        setIsLoading(false);
+      }
+    };
 
-  // Function to manually deselect the item
-  const handleClose = () => {
-    setSelectedItem(null);
-  };
+    fetchData();
+  }, [id]);
 
-  if (isLoading) return <div>Loading...</div>;
+  if (isLoading) {
+    return <div className="loading">Loading...</div>;
+  }
 
   return (
-    <div>
-      {selectedItem ? (
-        <div>
-          {selectedItem.attributes.pictures && selectedItem.attributes.pictures.length > 1 && (
-            <div>
-              <h1>{selectedItem.attributes.Name}</h1>
-              <p>{selectedItem.attributes.Description}</p>
-              <img
-                src={selectedItem.attributes.pictures[1].image.attributes.url}
-                alt={selectedItem.attributes.pictures[1].description}
-              />
-              {/* <p>{selectedItem.attributes.pictures[1].description}</p> */}
-              {/* Button to close or deselect the item */}
-            </div>
-          )}
-        </div>
-      ) : (
-        data.map(item => (
-          <div key={item.id} onClick={() => handleClick(item.id)}>
-            <h1>{item.attributes.Name}</h1>
-            <p>{item.attributes.Description}</p>
+    <div className="info-page">
+      <div className="selected-item-details">
+        <h1 className="item-name">{data.attributes.Name}</h1>
+        <p className="item-description">{data.attributes.Description}</p>
+        {data.attributes.picture && data.attributes.picture.length > 1 && (
+          <div className="item-image-container">
+            <img
+              src={"http://192.168.1.173:1337" + data.attributes.picture[0].image.data.attributes.url}
+              alt={data.attributes.picture[0].image.data.attributes.description}
+              className="item-image"
+            />
+            <p className="item-image-description">{data.attributes.picture[0].image.data.attributes.description}</p>
           </div>
-        ))
-      )}
+        )}
+      </div>
     </div>
   );
 }
+
 export default Info;

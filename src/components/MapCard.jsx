@@ -1,6 +1,5 @@
 import React from "react";
 import { useNavigate } from "react-router-dom"; 
-
 import {
   Card,
   CardContent,
@@ -10,13 +9,13 @@ import {
   Button
 } from "@mui/material";
 
-
 function MapCard(props) {
   const navigate = useNavigate(); 
 
   const handleInfoClick = () => {
-    navigate(`/Info`); 
+    navigate(`/info/${props.id}`); 
   };
+
   return (
     <>
       <Card className="map-card">

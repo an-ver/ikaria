@@ -3,7 +3,6 @@ import "../styles/Home.css";
 import CreateCard from "./CreateCard";
 import { useEffect, useState } from "react";
 import { getQuery } from "./api";
-import CardList from "./CardList";
 
 function Home() {
   const [data, setData] = useState([]);
@@ -30,9 +29,9 @@ function Home() {
         <h1 className="home-heading">Καλως ήρθατε στην Ικαρία</h1>
 
         <div className="home-dl-card">
-          <h2 className="welcome-heading">
+          {/* <h2 className="welcome-heading">
             Προγραμματίστε το επόμενο ταξίδι σας και ανακαλύψτε
-          </h2>
+          </h2> */}
           {data &&
             data
               .filter((item) => item.id >= 2 && item.id <= 5)
