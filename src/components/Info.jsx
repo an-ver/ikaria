@@ -29,23 +29,31 @@ function Info() {
   }
 
   return (
-    <div className="info-page">
-      <div className="selected-item-details">
-        <h1 className="item-name">{data.attributes.Name}</h1>
-        <p className="item-description">{data.attributes.Description}</p>
-        {data.attributes.picture && data.attributes.picture.length > 1 && (
-          <div className="item-image-container">
-            <img
-              src={"http://192.168.1.173:1337" + data.attributes.picture[0].image.data.attributes.url}
-              alt={data.attributes.picture[0].image.data.attributes.description}
-              className="item-image"
-            />
-            <p className="item-image-description">{data.attributes.picture[0].image.data.attributes.description}</p>
-          </div>
-        )}
-      </div>
+  <div className="info-page">
+    <div className="selected-item-details">
+      <h1 className="item-name">{data.attributes.Name}</h1>
+      <p className="item-description">{data.attributes.Description}</p>
+      {data.attributes.picture && data.attributes.picture.length > 0 && (
+        <div className="item-images-container">
+          {data.attributes.picture.map((pic, index) => (
+            <div key={index} className="item-image-container">
+              <img
+                src={`http://192.168.1.173:1337${pic.image.data.attributes.url}`}
+                alt={pic.image.data.attributes.name}
+                className="item-image"
+              />
+              {/*
+              <p className="item-image-description">{pic.image.data.attributes.description}</p>
+              */}
+              {pic.description.split('\n').map((line, index) => 
+              <p className="item-image-description">{line || ' '}</p>)}
+            </div>
+          ))}
+        </div>
+      )}
     </div>
-  );
+  </div>
+);
 }
 
 export default Info;

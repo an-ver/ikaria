@@ -1,5 +1,3 @@
-import React from "react";
-
 const CreateInfo = ({ data }) => {
     return {
         key: data.id,

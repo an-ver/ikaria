@@ -6,7 +6,9 @@ import FetchData from './FetchData.jsx';
 function Villages() {
 
   const { data, isLoading } = FetchData();
-    if (isLoading) return <div>Loading...</div>;
+    if (isLoading) {
+    return <div className="loader"></div>
+  }
 
   return (
         <div className='villages-container'>
