@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate } from "react-router-dom"; 
+import { useNavigate, NavLink } from "react-router-dom";
 
 import {
   Card,
@@ -7,16 +7,10 @@ import {
   CardMedia,
   Typography,
   CardActions,
-  Button
+  Button,
 } from "@mui/material";
 
-
 function MapCard(props) {
-  const navigate = useNavigate(); 
-
-  const handleInfoClick = () => {
-    navigate(`/Info`); 
-  };
   return (
     <>
       <Card className="map-card">
@@ -24,7 +18,9 @@ function MapCard(props) {
         <CardContent className="map-card-content">
           <Typography className="map-card-title">{props.name}</Typography>
           <CardActions className="map-card-actions">
-              <Button onClick={handleInfoClick} className="map-card-button">Πληροφορίες</Button>
+            <NavLink to={"/Info"}>
+              <Button className="map-card-button">Πληροφορίες</Button>
+            </NavLink>
           </CardActions>
         </CardContent>
       </Card>
@@ -33,5 +29,3 @@ function MapCard(props) {
 }
 
 export default MapCard;
-
-

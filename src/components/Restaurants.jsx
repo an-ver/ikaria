@@ -1,12 +1,22 @@
 import React from "react";
 import "../styles/Restaurants.css";
-import RestaurantCard from "./RestaurantCard";
+import CreateRestaurantCard from "./CreateRestaurantCard";
+import FetchData from "./FetchData.jsx";
 
 function Restaurants() {
+  const { data, isLoading } = FetchData();
+  if (isLoading) return <div>Loading...</div>;
   return (
     <div className="restaurant-container">
-      <h1>Τα Εστιατόρια</h1>
-      <RestaurantCard />
+      <h1 className="title">
+        Δοκίμασε τα εστιατόρια στην Ικαρία με φαγητό που θα σου μείνει αξέχαστο
+      </h1>
+      <dl className="restaurant-cards">
+        {data &&
+          data
+            .filter((item) => item.id >= 31 && item.id <= 34)
+            .map((item) => <CreateRestaurantCard key={item.id} data={item} />)}
+      </dl>
     </div>
   );
 }

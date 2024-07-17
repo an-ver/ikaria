@@ -43,7 +43,7 @@ function CardList(props) {
       <CardContent className="card-list-content">
         <Box display="flex" flexDirection="column" alignItems="center">
           <Box className="icon-box">{getIcon(props.name)}</Box>
-          <Link className="card-list-link" href={"/home"} underline="none">
+          <Link className="card-list-link" href={"/xwria"} underline="none">
             <Typography
               gutterBottom
               variant="h4"
