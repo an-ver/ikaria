@@ -9,13 +9,9 @@
     flex-direction: column;
     min-height: 100vh;
     width: 100vw;
-    margin: 0;
     position: absolute;
-    top: 0;
-    left: 0;
 }
 .panigiria-description {
-    font-family: 'Poppins', sans-serif;
     text-transform: none;
     font-size: 1.2em;
     text-align: center;
@@ -30,11 +26,11 @@
 .panigiria-container .panigiria-cards{
     display: flex;
     flex-wrap: wrap;
-    gap: 10%;
+    gap: 3%;
     justify-content: center;
     z-index: 2;
 }
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     .panigiria-container .panigiria-card {
         width: calc(50% - 20px);
     }
@@ -44,12 +40,12 @@
     .panigiria-container .panigiria-card {
         width: 100%;
     }
-}
+} */
 
  .panigiria-cards .map-card {
     max-width: 300px;
     max-height: 600px;
-    border-radius: 40px;
+    border-radius: 20px;
     box-shadow: 5px 5px 5px hsla(0, 0%, 0%, 0.1);
     display: flex;
     flex-direction: column;
@@ -68,7 +64,7 @@
 
  .panigiria-cards .map-card .map-card-media {
      width: 300px;
-     height: 300px;
+     height: 500px;
  }
 
  .panigiria-cards .map-card .map-card-content {
@@ -89,8 +85,8 @@
 
  .panigiria-cards .map-card .map-card-content .map-card-actions .map-card-button {
     position: relative;
-    color: white;
-    background-color: rgb(85, 85, 85);
+    color: rgb(255, 255, 255);
+    background-color: rgb(20, 2, 2);
     border: 1px solid grey;
     border-radius: 5px;
     padding: 5px 15px;
@@ -102,6 +98,6 @@
 
  .panigiria-cards .map-card .map-card-content .map-card-actions .map-card-button:hover {
      background-color: white;
-     color: black;
+     color: rgb(51, 7, 7);
  }
  

@@ -8,6 +8,7 @@ import Beaches from "./components/Beaches";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./components/Home";
 import Info from "./components/Info";
+import About from "./components/About";
 
 function App() {
   return (
@@ -20,7 +21,8 @@ function App() {
           <Route path="/paralies" element={<Beaches />} />
           <Route path="/estiatoria" element={<Restaurants />} />
           <Route path="/xwria" element={<Villages />} />
-          <Route path="/info/:id" element={<Info />} /> {/* Update this route */}
+          <Route path="/info/:id" element={<Info />} /> 
+          <Route path="/about" element = {<About/>}/>
         </Routes>
       </div>
     </BrowserRouter>

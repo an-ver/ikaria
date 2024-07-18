@@ -21,7 +21,6 @@ const Navbar = () => {
   };
   const navigate = useNavigate();
   const handleSearch = (searchTerm) => {
-    // Redirect to a search results page with the search term
     navigate(`/search?query=${encodeURIComponent(searchTerm)}`);
   };
 
@@ -41,7 +40,7 @@ const Navbar = () => {
             </NavLink>
           </li>
           <li className="nav-item">
-            <NavLink to="/" className="nav-link">
+            <NavLink to="/about" className="nav-link">
               <FontAwesomeIcon icon={faInfoCircle} className="nav-icon" />
               About
             </NavLink>

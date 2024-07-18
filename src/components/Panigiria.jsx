@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useRef, useEffect } from "react";
 import '../styles/Panigiria.css';
 import CreateMapCard from './CreateMapCard.jsx';
 import FetchData from './FetchData.jsx';
@@ -6,9 +6,32 @@ import FetchData from './FetchData.jsx';
 function Panigiria() {
 
     const { data, isLoading } = FetchData();
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const initialCardsCount = 3;
+    const scrollContainerRef = useRef(null);
+
+    const handlePrev = () => {
+        if (currentIndex > 0) {
+        setCurrentIndex(currentIndex - 1);
+        }
+    };
+
+    const handleNext = () => {
+        if (currentIndex + 1 < data.length) {
+        setCurrentIndex(currentIndex + 1);
+        }
+    };
+
+    useEffect(() => {
+        if (scrollContainerRef.current) {
+        scrollContainerRef.current.style.scrollBehavior = 'smooth';
+        scrollContainerRef.current.scrollLeft = (currentIndex * scrollContainerRef.current.offsetWidth) / initialCardsCount;
+        }
+    }, [currentIndex, initialCardsCount]);
     if (isLoading) {
         return <div className="loader"></div>
     }
+    
     return (
         <div className='panigiria-container'>
             <p className='panigiria-description'>Στα πανηγύρια της Ικαρίας, η μουσική αγκαλιάζει τον αέρα και η γη πάλλεται στον ρυθμό του χορού. 

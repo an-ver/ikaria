@@ -6,7 +6,7 @@ import FetchData from './FetchData.jsx';
 function Beaches() {
   const { data, isLoading } = FetchData();
   const [currentIndex, setCurrentIndex] = useState(0);
-  const initialCardsCount = 5;
+  const initialCardsCount = 3;
   const scrollContainerRef = useRef(null);
 
   const handlePrev = () => {
