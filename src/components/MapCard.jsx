@@ -6,7 +6,7 @@ import {
   CardMedia,
   Typography,
   CardActions,
-  Button
+  Button,
 } from "@mui/material";
 
 function MapCard(props) {
@@ -23,7 +23,7 @@ function MapCard(props) {
         <CardContent className="map-card-content">
           <Typography className="map-card-title">{props.name}</Typography>
           <CardActions className="map-card-actions">
-              <Button onClick={handleInfoClick} className="map-card-button">Πληροφορίες</Button>
+             <Button onClick={handleInfoClick} className="map-card-button">Πληροφορίες</Button>
           </CardActions>
         </CardContent>
       </Card>
@@ -32,5 +32,3 @@ function MapCard(props) {
 }
 
 export default MapCard;
-
-
