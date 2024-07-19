@@ -30,17 +30,6 @@
     justify-content: center;
     z-index: 2;
 }
-/* @media (max-width: 768px) {
-    .panigiria-container .panigiria-card {
-        width: calc(50% - 20px);
-    }
-}
-
-@media (max-width: 480px) {
-    .panigiria-container .panigiria-card {
-        width: 100%;
-    }
-} */
 
  .panigiria-cards .map-card {
     max-width: 300px;
