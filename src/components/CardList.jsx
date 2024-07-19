@@ -36,7 +36,6 @@ function getIcon(name) {
   }
 }
 
-
 function getPathByName(name) {
   switch (name) {
     case "Χωριά":
@@ -48,7 +47,7 @@ function getPathByName(name) {
     case "Εστιατόρια":
       return "/estiatoria";
     default:
-      return "/home"; 
+      return "/home";
   }
 }
 

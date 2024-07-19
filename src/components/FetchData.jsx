@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
-import { getQuery } from './api.jsx'; 
+import { useState, useEffect } from "react";
+import { getQuery } from "./api.jsx";
 
 const FetchData = () => {
   const [data, setData] = useState([]);
@@ -24,4 +24,3 @@ const FetchData = () => {
 };
 
 export default FetchData;
-

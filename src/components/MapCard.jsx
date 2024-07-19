@@ -13,7 +13,7 @@ function MapCard(props) {
   const navigate = useNavigate(); 
 
   const handleInfoClick = () => {
-    navigate(`/info/${props.id}`); 
+    navigate(`/info/${props.id}`);
   };
 
   return (
