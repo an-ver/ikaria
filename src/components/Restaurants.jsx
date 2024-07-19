@@ -5,7 +5,9 @@ import FetchData from "./FetchData.jsx";
 
 function Restaurants() {
   const { data, isLoading } = FetchData();
+
   if (isLoading) return <div>Loading...</div>;
+
   return (
     <div className="restaurant-container">
       <h1 className="title">
@@ -14,7 +16,7 @@ function Restaurants() {
       <dl className="restaurant-cards">
         {data &&
           data
-            .filter((item) => item.id >= 31 && item.id <= 34)
+            .filter((item) => item.id >= 45 && item.id <= 54)
             .map((item) => <CreateRestaurantCard key={item.id} data={item} />)}
       </dl>
     </div>

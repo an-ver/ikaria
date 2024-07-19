@@ -14,7 +14,6 @@ body {
 .restaurant-container {
     width: 100%;
     height: 100%;
-    /* display: flex; */
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
@@ -23,119 +22,109 @@ body {
 .restaurant-cards {
     display: flex;
     flex-wrap: wrap;
-    /* border-top: 8px double #06535e; */
      background-color: #9aafb3;
     justify-content: center;
     flex-direction: row;
     margin-top: 250px;
     padding-top: 10px;
-    /* Adjust spacing below the border */
     gap: 10px;
-    /* Space between cards */
 }
 
 
 .restaurant-container .restaurant-card {
+width: 280px;
+    height: 360px;
+    border-radius: 15px;
+    padding: 1.5rem;
+    background: white;
     position: relative;
-    margin: 10px;
-    width: 350px;
-    height: 500px;
-    background-color: #f2f2f2;
     display: flex;
-    transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    align-items: flex-end;
+    transition: 0.4s ease-out;
+    box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
 
 }
 
 .restaurant-card:hover {
-    transform: scale(1.05);
-  
-    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+    transform: translateY(20px);
+    cursor: pointer;
 }
-
-.restaurant-card .card-content {
+.restaurant-card:before {
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
+    display: block;
     width: 100%;
     height: 100%;
-    padding: 20px;
-    box-sizing: border-box;
-    background-color: #f2f2f2;
-    transform: rotateX(-90deg);
-    transform-origin: bottom;
-    transition: all 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    border-radius: 15px;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 2;
+    transition: 0.5s;
+    opacity: 0;
 }
 
+.restaurant-card:hover:before {
+    
+    opacity: 1;
+}
+
+
+.restaurant-card .image-card{
+    width: 100%;
+        height: 100%;
+        -o-object-fit: cover;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 15px;
+}
+
+.restaurant-card .card-content {
+    position: relative;
+        z-index: 3;
+        color: white;
+        opacity: 0;
+        transform: translateY(30px);
+        transition: 0.5s;
+}
+.restaurant-card .card-content {
+ 
+    position: relative;
+    z-index: 3;
+    color: white;
+    opacity: 1;
+    transform: translateY(0);
+    transition: 0.5s;
+    }
+
 .restaurant-card:hover .card-content {
-    transform: rotateX(0deg);
-    background-color: #06535e;
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .restaurant-card .card-title {
-    position: absolute;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-        bottom: 10px;
-        left: 20%;
-        transform: translateX(-50%);
-        margin-top: 0;
-        font-size: 25px;
-        color: #ffffff;
-        font-weight: 600;
-        z-index: 1;
-        /* Ensure it is in front of the image */
+    font-style: oblique;
+    bottom: 10px;
+    left: 10px;
+    margin-top: 0;
+    font-size: 25px;
+    color: #ffffff;
+    font-weight: 500;
+    z-index: 1;
 }
-.restaurant-card:hover .card-title {
-    display: none;
-}
+
+
 .rating {
-    grid-row: 3;
-    color:#ff9900;
+    color: #ff9900;
     font-size: 20px;
     display: flex;
-    flex-flow: row nowrap;
-    i {
-    	margin: 0 1px;
-    	}
-    }
+    align-items: center;
+}
+
+.rating i {
+    margin: 0 1px;
+}
     	
-
-.restaurant-card .image-card {
-    width: 350px;
-    height: auto;
-    transition: all 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.restaurant-card:hover .image-card {
-    scale: 0;
-}
-
-.restaurant-card .button {
-    margin-top: 20px;
-    width: fit-content;
-        min-width: 100px;
-        height: 45px;
-        padding: 20px;
-        border-radius: 5px;
-        border: 2.5px solid #E0E1E4;
-        box-shadow: 0px 0px 20px -20px;
-        cursor: pointer;
-        background-color: white;
-        transition: all 0.2s ease-in-out 0ms;
-        user-select: none;
-        font-family: 'Poppins', sans-serif;
-}
-
-
-
-.restaurant-card .button:hover {
-    background-color: #F2F2F2;
-        box-shadow: 0px 0px 20px -18px;
-    }
-
-.restaurant-card .button:active {
-    transform: scale(0.95);
-}

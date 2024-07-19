@@ -14,12 +14,15 @@ const SearchInput = ({ onSearch }) => {
 
   return (
     <div className="search">
+      <label htmlFor="search-input"></label> {/* Updated label */}
       <input
+        id="search-input" // Updated id
         type="text"
         placeholder="Search..."
         value={searchTerm}
         onChange={handleChange}
         className="search-input"
+        name="search" // Added name attribute
       />
       <button onClick={handleSearch} className="search-button">
         <svg className="search-icon" aria-hidden="true" viewBox="0 0 24 24">
