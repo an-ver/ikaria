@@ -1,4 +1,3 @@
-// useFetchData.js
 import { useState, useEffect } from "react";
 import { getQuery } from "./api.jsx";
 

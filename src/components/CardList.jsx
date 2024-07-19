@@ -36,14 +36,30 @@ function getIcon(name) {
   }
 }
 
+function getPathByName(name) {
+  switch (name) {
+    case "Χωριά":
+      return "/xwria";
+    case "Πανηγύρια":
+      return "/panigiria";
+    case "Παραλίες":
+      return "/paralies";
+    case "Εστιατόρια":
+      return "/estiatoria";
+    default:
+      return "/home";
+  }
+}
+
 function CardList(props) {
+  const path = getPathByName(props.name);
   return (
     <Card className="card-list">
       <CardMedia className="card-list-media " image={props.image} />
       <CardContent className="card-list-content">
         <Box display="flex" flexDirection="column" alignItems="center">
           <Box className="icon-box">{getIcon(props.name)}</Box>
-          <Link className="card-list-link" href={"/xwria"} underline="none">
+          <Link className="card-list-link" href={path} underline="none">
             <Typography
               gutterBottom
               variant="h4"

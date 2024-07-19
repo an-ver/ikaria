@@ -1,5 +1,6 @@
-/* Home page specific styles */
-
+.Home{
+    background-color: rgb(228, 228, 228);
+}
 .home-content .home-heading {
     margin-top: 800px;
     left: 10px; 
@@ -11,7 +12,7 @@
     font-style: oblique;
     font-size: 80px;
     line-height: 1.2em;
-    color: rgb(255, 255, 255);
+    color: rgb(230, 209, 209);
     padding: 10px;
     text-shadow: 0.08em 0.08em 0.08em rgba(0, 0, 0, 0.4);}
 
@@ -41,7 +42,7 @@
 }
 .home-dl-card .card-list {
     max-width: 300px;
-    border: 1px solid hsl(0, 0%, 80%);
+    border: 1px solid hsl(0, 15%, 90%);
     border-radius: 50px;
     box-shadow: 5px 5px 5px hsla(0, 0%, 0%, 0.1);
     display: inline-block;
@@ -54,34 +55,23 @@
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* Card Media Styling */
-.home-dl-card .card-list-media {
+.home-dl-card .card-list .card-list-media {
     width: 300px;
     height: 300px;
 }
 
-/* Card Content Styling */
- .home-dl-card  .card-list-content {
+.home-dl-card .card-list .card-list-media .card-list-content {
     padding: 16px;
     
 }
 
-/* Typography Styling for Link */
-.home-dl-card  .card-list-link {
+.home-dl-card .card-list .card-list-media .card-list-content .card-list-link {
     text-decoration: none;
     color: inherit;
 }
 
-@media (max-width: 768px) {
-    .home-content .home-dl-card {
-        width: calc(50% - 20px);
-        /* Adjust width for smaller screens */
-    }
-}
-
-@media (max-width: 480px) {
-    .home-content .home-dl-card {
-        width: 100%;
-        /* Adjust width for smallest screens */
-    }
+.home-dl-card .card-list .card-list-media .card-list-content .card-list-title {
+    font-size: 1.25rem;
+    margin-bottom: 16px;
+    text-align: center;
 }

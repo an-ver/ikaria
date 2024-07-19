@@ -1,21 +1,60 @@
 .villages-container {
     background-image: url('../assets/images/xwria-back.png');
     background-size: cover;
-    background-position: center;
+    background-repeat: no-repeat;
     background-attachment: fixed;
-    padding: 20px;
-    color: #ffffff;
+    padding: 4%;
+    display: flex;
     flex-direction: column;
     min-height: 100vh;
-    width: 100vw;
-    margin: 0;
-    position: absolute;
-    top: 0;
-    left: 0;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: auto;
+    border: 100px solid rgba(255, 255, 255, 0.5);
+    
 }
 
+.nav-button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    padding: 12px;
+    margin: 20px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.nav-button.left {
+    left: 10px;
+}
+
+.nav-button.right {
+    right: 10px;
+}
+
+.nav-button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+    transform: scale(1.05);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.nav-button:disabled {
+    background-color: #cccccc;
+    color: #666666;
+    cursor: not-allowed;
+    transform: scale(1);
+    box-shadow: none;
+}
 .villages-description {
     font-family: 'Poppins', sans-serif;
+    text-transform: none;
     font-size: 1.2em;
     text-align: center;
     font-weight: 500;
@@ -28,60 +67,60 @@
 
 .villages-container .villages-cards{
     display: flex;
-    flex-wrap: wrap;
-    gap: 7%;
+    overflow: hidden;
     justify-content: center;
-    z-index: 2;
+    padding: 20px;
+    flex-wrap: nowrap;
+    max-width: 100%;
+    scroll-behavior: smooth;
 }
 
-@media (max-width: 768px) {
-    .villages-container .villages-cards {
-        width: calc(50% - 20px);
-    }
-}
-
-@media (max-width: 480px) {
-    .villages-container .villages-cards {
-        width: 100%;
-    }
-}
 
 .villages-cards .map-card {
-    max-width: 300px;
-    max-height: 400px;
-    border: 1px solid hsl(155, 83%, 35%);
-    border-radius: 40px;
-    box-shadow: 5px 5px 5px hsla(55, 6%, 39%, 0.5);
+    width: 350px;
+    height: 500px;
+    box-shadow: 5px 5px 15px hsla(0, 0%, 0%, 0.1);
     display: flex;
     flex-direction: column;
     cursor: pointer;
     overflow: hidden;
     transition: all 0.3s ease-in-out;
     position: relative;
-    margin-bottom: 10%;
+    margin: 10px;
+    border-radius: 10px;
+    background-color: #fff;
        
 }
 
 .villages-cards .map-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    transform: scale(1.02) translateY(-10px);
+    box-shadow: 0px 8px 16px rgba(10, 10, 10, 0.2);
+    z-index: 10;
 }
 
 .villages-cards .map-card .map-card-media {
-    width: 300px;
-    height: 300px;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
 }
 
 .villages-cards .map-card .map-card-content {
     flex-grow: 1;
-    padding: 16px;
     color: rgb(0, 0, 0);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.3);
 }
 
 .villages-cards .map-card .map-card-content .map-card-title {
     text-align: center;
-    font-size: 1.25rem;
-    margin-bottom: 16px;
+        font-weight: bold;
+        color: #333;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        font-size: 1.25rem;
+        margin-bottom: 16px;
 }
 
 .villages-cards .map-card .map-card-content .map-card-actions {
@@ -105,6 +144,6 @@
 }
 
 .villages-cards .map-card .map-card-content .map-card-actions .map-card-button:hover {
-    background-color: white;
-    color: rgb(0, 0, 0);
+    background-color: rgb(3, 50, 71);
+    color: rgb(255, 255, 255);
 }

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import '../styles/Panigiria.css';
 import CreateMapCard from './CreateMapCard.jsx';
 import FetchData from './FetchData.jsx';
@@ -6,7 +6,11 @@ import FetchData from './FetchData.jsx';
 function Panigiria() {
 
     const { data, isLoading } = FetchData();
-    if (isLoading) return <div>Loading...</div>;
+
+    if (isLoading) {
+        return <div className="loader"></div>
+    }
+    
     return (
         <div className='panigiria-container'>
             <p className='panigiria-description'>Στα πανηγύρια της Ικαρίας, η μουσική αγκαλιάζει τον αέρα και η γη πάλλεται στον ρυθμό του χορού. 
