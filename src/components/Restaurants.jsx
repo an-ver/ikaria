@@ -46,7 +46,7 @@ function Restaurants() {
 
   return (
     <div className="restaurant-container">
-      <h1 className="title">Restaurants</h1>
+      {/* <h1 className="title">Restaurants</h1> */}
       <button
         onClick={handlePrev}
         className="nav-button left "
