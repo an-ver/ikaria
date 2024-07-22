@@ -1,6 +1,10 @@
 .Home{
-    background-color: rgb(228, 228, 228);
+    background-color: rgb(79, 145, 145);
+    position: relative;
+    width: 100%;
+        height: auto;
 }
+
 .home-content .home-heading {
     margin-top: 800px;
     left: 10px; 

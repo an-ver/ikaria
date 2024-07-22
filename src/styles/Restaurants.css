@@ -1,33 +1,63 @@
-html,
-body {
+.restaurant-container {
+    background-image: url("../assets/images/restaurant-background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: "Playfair Display", sans-serif;
     width: 100%;
-    height: 100%;
-    margin: 0px;
-    padding: 0;
-    background-color: #ffffff;
+        height: 100%;
+        margin: 0px;
+        padding: 6%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    
 }
 .title{
     text-transform:none;
     padding-top: 100px;
-    text-align: center;
+    text-align: left;
+    color: #ffffff;
+    font-size: 3em;
+    
 }
-.restaurant-container {
-    width: 100%;
-    height: 100%;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 20px;
-}
+
 .restaurant-cards {
-    display: flex;
-    flex-wrap: wrap;
-     background-color: #9aafb3;
+    display:flex;
+    flex-wrap: nowrap;
     justify-content: center;
-    flex-direction: row;
     margin-top: 250px;
-    padding-top: 10px;
-    gap: 10px;
+    gap: 50px;
+}
+.restaurant-container .nav-button{
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    padding: 12px;
+    margin: 20px;
+    border-radius: 10%;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 70%;
+    transform: translateY(-50%);
+}
+
+
+.restaurant-container .nav-button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+    transform: scale(1.05);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.restaurant-container .nav-button:disabled {
+    background-color: #cccccc;
+    color: #666666;
+    cursor: not-allowed;
+    transform: scale(1);
+    box-shadow: none;
 }
 
 

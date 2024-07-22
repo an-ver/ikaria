@@ -3,13 +3,13 @@ import "../styles/Home.css";
 import CreateCard from "./CreateCard";
 import React from "react";
 import "../styles/Loader.css";
-import FetchData from './FetchData.jsx';
+import FetchData from "./FetchData.jsx";
 
 function Home() {
   const { data, isLoading } = FetchData();
   if (isLoading) {
-     return <div className="loader"></div>
-   }
+    return <div className="loader"></div>;
+  }
 
   return (
     <div>
