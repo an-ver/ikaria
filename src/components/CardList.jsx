@@ -73,8 +73,11 @@ function CardList(props) {
             variant="body2"
             color="text.primary"
             textAlign="center"
+            
             sx={{
               margin: "20px",
+              textTransform: "none",
+              fontWeight: 700, 
             }}
           >
             {props.description}

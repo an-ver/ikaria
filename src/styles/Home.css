@@ -2,7 +2,7 @@
     background-color: rgb(79, 145, 145);
     position: relative;
     width: 100%;
-        height: auto;
+    height: auto;
 }
 
 .home-content .home-heading {
@@ -10,7 +10,6 @@
     left: 10px; 
     position: absolute;
     font-family: effra, cursive;
-  
     font-optical-sizing: auto; 
     font-weight: 500;
     font-style: oblique;
@@ -20,19 +19,6 @@
     padding: 10px;
     text-shadow: 0.08em 0.08em 0.08em rgba(0, 0, 0, 0.4);}
 
-.home-content .welcome-heading{
-    position: absolute;
-    text-align: center;
-    top:100px;
-    font-family: effra, cursive;
-    font-optical-sizing: auto;
-    font-weight: 500;
-    font-style: oblique;
-    font-size: 50px;
-    line-height: 1.2em;
-    text-shadow: 0.08em 0.08em 0.08em rgba(0, 0, 0, 0.4);
-        
-}
 
 .home-content .home-dl-card {
     position: absolute;
@@ -51,7 +37,6 @@
     box-shadow: 5px 5px 5px hsla(0, 0%, 0%, 0.1);
     display: inline-block;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-
 }
  .home-dl-card .card-list:hover {
     cursor: pointer;
@@ -66,6 +51,7 @@
 
 .home-dl-card .card-list .card-list-media .card-list-content {
     padding: 16px;
+    text-transform: none;
     
 }
 
@@ -78,4 +64,5 @@
     font-size: 1.25rem;
     margin-bottom: 16px;
     text-align: center;
+    text-transform: none;
 }

@@ -1,6 +1,7 @@
 import React from "react";
 import '../styles/About.css';
 import FetchData from './FetchData.jsx';
+import CreateAboutCard from "./CreateAboutCard.jsx";
 
 function About() {
   
@@ -10,8 +11,11 @@ function About() {
         return <div className="loader"></div>
     }
   return (
-    <div className="about-header">
-      <p>This is the about page.</p>
+    <div className="cards-container"> 
+      <dl>
+        {data && data.filter(item => item.id >= 55 && item.id <= 56)
+          .map(item => <CreateAboutCard key={item.id} data={item}/>)}
+      </dl>
     </div>
   );
 }

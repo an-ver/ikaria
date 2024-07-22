@@ -1,0 +1,8 @@
+/* fallback */
+@font-face {
+  font-family: 'Playwrite CZ';
+  font-style: normal;
+  font-weight: 100 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/playwritecz/v1/8vIP7wYp22pt_BUChSHeVxx_Ng.woff2) format('woff2');
+}
