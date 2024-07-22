@@ -2,6 +2,8 @@ import React, { useState, useRef, useEffect } from "react";
 import "../styles/Villages.css";
 import CreateMapCard from './CreateMapCard.jsx';
 import FetchData from './FetchData.jsx';
+import { FaArrowLeft } from "react-icons/fa";
+import { FaArrowRight } from "react-icons/fa";
 
 function Villages() {
 
@@ -41,7 +43,7 @@ function Villages() {
             className="nav-button left"
             disabled={currentIndex === 0}
           >
-            {"<"}
+            {<FaArrowLeft />}
         </button>
           <div className="villages-cards" ref={scrollContainerRef}>
             {displayData.slice(currentIndex, currentIndex + initialCardsCount).map((item) => (
@@ -53,7 +55,7 @@ function Villages() {
             className="nav-button right"
             disabled={currentIndex + initialCardsCount >= displayData.length}
           >
-            {">"}
+            {<FaArrowRight />}
         </button>
       </div>
   );

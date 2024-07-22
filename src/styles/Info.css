@@ -73,3 +73,16 @@ body {
     letter-spacing: 0.5px;
     text-transform: none;
 }
+
+.mapContainer {
+    margin-top: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mapContainer:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}

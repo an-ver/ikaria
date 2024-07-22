@@ -2,6 +2,9 @@ import React, { useState, useRef, useEffect } from "react";
 import "../styles/Beaches.css";
 import CreateMapCard from './CreateMapCard.jsx';
 import FetchData from './FetchData.jsx';
+import { FaArrowLeft } from "react-icons/fa";
+import { FaArrowRight } from "react-icons/fa";
+
 
 function Beaches() {
   const { data, isLoading } = FetchData();
@@ -41,7 +44,7 @@ function Beaches() {
         className="nav-button left"
         disabled={currentIndex === 0}
       >
-        {"<"}
+        {<FaArrowLeft />}
       </button>
       <div className="beaches-cards" ref={scrollContainerRef}>
         {displayData.slice(currentIndex, currentIndex + initialCardsCount).map((item) => (
@@ -53,7 +56,7 @@ function Beaches() {
         className="nav-button right"
         disabled={currentIndex + initialCardsCount >= displayData.length}
       >
-        {">"}
+        {<FaArrowRight />}
       </button>
     </div>
   );
