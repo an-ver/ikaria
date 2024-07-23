@@ -8,7 +8,6 @@ import L from "leaflet";
 import mapPin from "../assets/images/mapPin.png";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faMapPin } from "@fortawesome/free-solid-svg-icons";
-import { parseEvents, mapEventsToCoordinates } from "./Utils";
 
 library.add(faMapPin);
 
@@ -92,6 +91,7 @@ function Info() {
                 icon={customMarkerIcon}
               >
                 <Popup>
+                  <p style={{ textAlign: "center", fontWeight: "bold" }}>{data.attributes.Name}</p>
                   {data.attributes.picture &&
                     data.attributes.picture.length > 0 && (
                       <img
@@ -100,11 +100,8 @@ function Info() {
                           data.attributes.picture[0].image.data.attributes.name
                         }
                         style={{
-                          width: "100px",
+                          width: "130px",
                           height: "auto",
-                          display: "block",
-                          marginLeft: "auto",
-                          marginRight: "auto",
                         }}
                       />
                     )}
