@@ -1,23 +1,57 @@
 .restaurant-container {
     background-image: url("../assets/images/restaurant-background.png");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        font-family: "Playfair Display", sans-serif;
-        width: 100%;
-        margin: 0;
-        padding: 5%;
-        /* Adjusted padding to be more responsive */
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        /* Ensure content is at the bottom */
-        align-items: center;
-        min-height: 100vh;
-        /* Ensure container covers full viewport height */
-        box-sizing: border-box;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 4%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: auto;
+    border: 100px solid rgba(255, 255, 255, 0.5);
     
 }
+
+.nav-button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    padding: 12px;
+    margin: 20px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.nav-button.left {
+    left: 10px;
+}
+
+.nav-button.right {
+    right: 10px;
+}
+
+.nav-button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+    transform: scale(1.05);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.nav-button:disabled {
+    background-color: #cccccc;
+    color: #666666;
+    cursor: not-allowed;
+    transform: scale(1);
+    box-shadow: none;
+}
+
 .title{
     text-transform:none;
     padding-top: 100px;
@@ -31,40 +65,8 @@
     display:flex;
     flex-wrap: nowrap;
     justify-content: center;
-    margin-top: 250px;
-    gap: 50px;
+    gap: 30px;
 }
-.restaurant-container .nav-button{
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #ffffff;
-    border: none;
-    cursor: pointer;
-    padding: 12px;
-    margin: 20px;
-    border-radius: 10%;
-    font-size: 1.2rem;
-    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    position: absolute;
-    top: 70%;
-    transform: translateY(-50%);
-}
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .restaurant-container .nav-button {
-        font-size: 1.2rem;
-        padding: 12px;
-        margin: 20px;
-        top: auto;
-        bottom: 20px;
-        transform: none;
-        width: calc(100% - 40px);
-        left: 50%;
-        transform: translateX(-50%);
-        border-radius: 10%;
-    }
-}
-
 
 .restaurant-container .nav-button:hover {
     background-color: rgba(0, 0, 0, 0.7);
@@ -82,9 +84,9 @@
 
 
 .restaurant-container .restaurant-card {
-width: 280px;
+    width: 280px;
     height: 360px;
-    border-radius: 15px;
+    border-radius: 10px;
     padding: 1.5rem;
     background: white;
     position: relative;
@@ -115,35 +117,23 @@ width: 280px;
 }
 
 .restaurant-card:hover:before {
-    
     opacity: 1;
 }
 
-
 .restaurant-card .image-card{
     width: 100%;
-        height: 100%;
-        -o-object-fit: cover;
-        object-fit: cover;
-        position: absolute;
-        top: 0;
-        left: 0;
-        border-radius: 15px;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
 }
 
 .restaurant-card .card-content {
     position: relative;
-        z-index: 3;
-        color: white;
-        opacity: 0;
-        transform: translateY(30px);
-        transition: 0.5s;
-}
-.restaurant-card .card-content {
- 
-    position: relative;
     z-index: 3;
-    color: white;
     opacity: 1;
     transform: translateY(0);
     transition: 0.5s;
@@ -159,7 +149,6 @@ width: 280px;
     font-style: oblique;
     bottom: 10px;
     left: 10px;
-    margin-top: 0;
     font-size: 25px;
     color: #ffffff;
     font-weight: 500;
@@ -168,10 +157,9 @@ width: 280px;
 
 
 .rating {
-    color: #ff9900;
+    color: #ffee00e1;
     font-size: 20px;
     display: flex;
-    align-items: center;
 }
 
 .rating i {
