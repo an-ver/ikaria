@@ -44,9 +44,7 @@ function Info() {
     return <div className="loader"></div>;
   }
 
-  console.log("data", data);
   const coordinates = data?.attributes.coordinates || [];
-  const description = data.attributes.Description;
 
   return (
     <div className="info-page">
@@ -94,9 +92,6 @@ function Info() {
                 icon={customMarkerIcon}
               >
                 <Popup>
-                  <div style={{ fontWeight: "bold", textAlign: "center" }}>
-                    {description[index] || data.attributes.Name}
-                  </div>
                   {data.attributes.picture &&
                     data.attributes.picture.length > 0 && (
                       <img
