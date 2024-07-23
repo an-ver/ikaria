@@ -6,7 +6,7 @@
 }
 
 .home-content .home-heading {
-    margin-top: 800px;
+    margin-top: 750px;
     left: 10px; 
     position: absolute;
     font-family: effra, cursive;
@@ -14,9 +14,8 @@
     font-weight: 500;
     font-style: oblique;
     font-size: 80px;
-    line-height: 1.2em;
+    line-height: 1.1em;
     color: rgb(230, 209, 209);
-    padding: 10px;
     text-shadow: 0.08em 0.08em 0.08em rgba(0, 0, 0, 0.4);}
 
 
