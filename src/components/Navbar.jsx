@@ -10,16 +10,17 @@ import {
   faInfoCircle,
   faBars,
 } from "@fortawesome/free-solid-svg-icons";
-import SearchInput from "./SearchInput";
+
 import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const navigate = useNavigate();
 
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
   };
-  const navigate = useNavigate();
+
   const handleSearch = (searchTerm) => {
     navigate(`/search?query=${encodeURIComponent(searchTerm)}`);
   };
@@ -44,14 +45,6 @@ const Navbar = () => {
               <FontAwesomeIcon icon={faInfoCircle} className="nav-icon" />
               About
             </NavLink>
-          </li>
-          <li className="nav-item ">
-            {/* <span className="nav-link" onClick={toggleSearch}>
-              <FontAwesomeIcon icon={faMagnifyingGlass} className="nav-icon" />
-            </span> */}
-            <div className="nav-item-search">
-              <SearchInput onSearch={handleSearch} />
-            </div>
           </li>
 
           <li className="nav-item dropdown">

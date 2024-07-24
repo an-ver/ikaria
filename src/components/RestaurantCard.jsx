@@ -1,5 +1,4 @@
 import React from "react";
-// import { Link } from "react-router-dom";
 import { Card, CardContent } from "@mui/material";
 import Rating from "./Rating";
 

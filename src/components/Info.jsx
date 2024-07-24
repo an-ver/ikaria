@@ -8,7 +8,6 @@ import L from "leaflet";
 import mapPin from "../assets/images/mapPin.png";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faMapPin } from "@fortawesome/free-solid-svg-icons";
-import { parseEvents, mapEventsToCoordinates } from "./Utils";
 
 library.add(faMapPin);
 
