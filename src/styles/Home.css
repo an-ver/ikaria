@@ -1,12 +1,15 @@
 .Home{
-    background-color: rgb(79, 145, 145);
     position: relative;
     width: 100%;
     height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .home-content .home-heading {
-    margin-top: 750px;
+    margin-top: 800px;
     left: 10px; 
     position: absolute;
     font-family: effra, cursive;
@@ -26,7 +29,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 50px;
-    justify-content: flex-start;
+    justify-content: center;
     z-index: 2;
 }
 .home-dl-card .card-list {

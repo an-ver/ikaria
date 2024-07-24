@@ -15,6 +15,32 @@
     border: 100px solid rgba(255, 255, 255, 0.5);
 }
 
+
+
+.beaches-description {
+    font-size: 1.2em;
+    text-align: center;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    z-index: 2;
+    background-color: rgba(9, 99, 64, 0.5);
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    text-transform: none;
+}
+
+.beaches-cards {
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    padding: 20px;
+    flex-wrap: nowrap;
+    max-width: 100%;
+    scroll-behavior: smooth;
+
+}
+
 .nav-button {
     background-color: rgba(0, 0, 0, 0.5);
     color: #ffffff;
@@ -53,29 +79,6 @@
     box-shadow: none;
 }
 
-.beaches-description {
-    font-size: 1.2em;
-    text-align: center;
-    font-weight: 500;
-    color: rgb(255, 255, 255);
-    z-index: 2;
-    background-color: rgba(9, 99, 64, 0.5);
-    padding: 10px 20px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    text-transform: none;
-}
-
-.beaches-cards {
-    display: flex;
-    overflow: hidden;
-    justify-content: center;
-    padding: 20px;
-    flex-wrap: nowrap;
-    max-width: 100%;
-    scroll-behavior: smooth;
-
-}
 .beaches-cards .map-card {
     width: 350px;
     height: 500px;
@@ -158,4 +161,41 @@
     margin: auto;
 }
 
+@media (max-width: 768px) {
 
+    .beaches-cards {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+    }
+
+    .beaches-cards .map-card {
+        flex: 0 0 auto;
+        width: calc(100% - 40px);
+        scroll-snap-align: start;
+        margin-right: 20px;
+    }
+        .nav-button.left {
+            left: 10px;
+            z-index: 10;
+        }
+}
+
+@media (max-width: 480px) {
+    .beaches-cards {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+        }
+    
+        .beaches-cards .map-card {
+            flex: 0 0 auto;
+            width: calc(100% - 40px);
+            scroll-snap-align: start;
+            margin-right: 20px;
+        }
+        .nav-button.left {
+            left: 10px;
+            z-index: 10;
+        }
+}

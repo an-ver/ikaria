@@ -10,7 +10,6 @@ function Home() {
   if (isLoading) {
     return <div className="loader"></div>;
   }
-
   return (
     <div>
       <>
