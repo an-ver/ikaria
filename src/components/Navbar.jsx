@@ -1,26 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/Navbar.css";
-import { useState } from "react";
 import logo from "../assets/images/logo.png";
 import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faHouse,
-  faMagnifyingGlass,
   faInfoCircle,
   faBars,
+  faUmbrellaBeach,
+  faUtensils,
+  faTree,
+  faGuitar,
 } from "@fortawesome/free-solid-svg-icons";
-import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
-  };
-  const navigate = useNavigate();
-  const handleSearch = (searchTerm) => {
-    navigate(`/search?query=${encodeURIComponent(searchTerm)}`);
   };
 
   return (
@@ -30,8 +27,8 @@ const Navbar = () => {
           <img src={logo} alt="Logo" className="logo" />
         </NavLink>
       </div>
-      <div>
-        <ul className="nav-menu">
+      <div className="nav-container">
+        <ul className={`nav-menu ${isDropdownOpen ? "active" : ""}`}>
           <li className="nav-item">
             <NavLink to="/" className="nav-link">
               <FontAwesomeIcon icon={faHouse} className="nav-icon" />
@@ -44,31 +41,34 @@ const Navbar = () => {
               About
             </NavLink>
           </li>
-
-          <li className="nav-item dropdown">
-            <span className="nav-link" onClick={toggleDropdown}>
-              <FontAwesomeIcon icon={faBars} className="nav-icon-menu" />
-            </span>
-            {isDropdownOpen && (
-              <div className="dropdown-content">
-                <ul>
-                  <li>
-                    <NavLink to="/paralies">Παραλίες</NavLink>
-                  </li>
-                  <li>
-                    <NavLink to="/estiatoria">Εστιατόρια</NavLink>
-                  </li>
-                  <li>
-                    <NavLink to="/xwria">Χωριά</NavLink>
-                  </li>
-                  <li>
-                    <NavLink to="/panigiria">Πανηγύρια</NavLink>
-                  </li>
-                </ul>
-              </div>
-            )}
+          <li className="nav-item">
+            <NavLink to="/paralies" className="nav-link">
+              <FontAwesomeIcon icon={faUmbrellaBeach} className="nav-icon" />
+              Παραλίες
+            </NavLink>
+          </li>
+          <li className="nav-item">
+            <NavLink to="/estiatoria" className="nav-link">
+              <FontAwesomeIcon icon={faUtensils} className="nav-icon" />
+              Εστιατόρια
+            </NavLink>
+          </li>
+          <li className="nav-item">
+            <NavLink to="/xwria" className="nav-link">
+              <FontAwesomeIcon icon={faTree} className="nav-icon" />
+              Χωριά
+            </NavLink>
+          </li>
+          <li className="nav-item">
+            <NavLink to="/panigiria" className="nav-link">
+              <FontAwesomeIcon icon={faGuitar} className="nav-icon" />
+              Πανηγύρια
+            </NavLink>
           </li>
         </ul>
+        <div className="nav-icon-menu" onClick={toggleDropdown}>
+          <FontAwesomeIcon icon={faBars} />
+        </div>
       </div>
     </nav>
   );

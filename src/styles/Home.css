@@ -1,6 +1,6 @@
 .Home{
     position: relative;
-    width: 100%;
+    width: 10%;
     height: auto;
     display: flex;
     align-items: center;
@@ -23,6 +23,11 @@
 
 
 .home-content .home-dl-card {
+    background-image: url('../assets/images/ikaria-back2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100%;
     position: absolute;
     margin: 1000px 0px 0px 0px;
     padding: 14%;
