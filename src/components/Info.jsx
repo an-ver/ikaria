@@ -91,7 +91,9 @@ function Info() {
                 icon={customMarkerIcon}
               >
                 <Popup>
-                  <p style={{ textAlign: "center", fontWeight: "bold" }}>{data.attributes.Name}</p>
+                  <p style={{ textAlign: "center", fontWeight: "bold" }}>
+                    {data.attributes.Name}
+                  </p>
                   {data.attributes.picture &&
                     data.attributes.picture.length > 0 && (
                       <img

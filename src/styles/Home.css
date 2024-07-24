@@ -23,8 +23,10 @@
 
 
 .home-content .home-dl-card {
+
     position: absolute;
-    margin: 1000px 0px 0px 0px;
+    width: 100%;
+    margin: 900px 0px 0px 0px;
     padding: 14%;
     display: flex;
     flex-wrap: wrap;

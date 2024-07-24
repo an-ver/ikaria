@@ -4,6 +4,7 @@ import CreateCard from "./CreateCard";
 import React from "react";
 import "../styles/Loader.css";
 import FetchData from "./FetchData.jsx";
+import backImg from "../assets/images/back-card-home.jpg";
 
 function Home() {
   const { data, isLoading } = FetchData();

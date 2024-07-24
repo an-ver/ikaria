@@ -1,8 +1,8 @@
-import axios from 'axios';
+import axios from "axios";
 
 const PORT = 1337;
 const url = `http://192.168.1.173:${PORT}`;
-const GET_DATA = 'places';
+const GET_DATA = "places";
 
 export async function getQuery() {
   const query = `http://192.168.1.173:1337/api/places?/publicationState=
@@ -12,4 +12,3 @@ export async function getQuery() {
   const response = await axios.get(query);
   return response.data.data;
 }
-
