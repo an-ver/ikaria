@@ -9,12 +9,6 @@ export async function getQuery() {
   preview&populate[1]=Description,Name,
   description&populate[2]=picture.image,name,description,
   preview&populate[3]=coordinates.long,lat`;
-  
-  const beach_query = `http://192.168.1.173:1337/api/beaches?/publicationState=
-  preview&populate[1]=Thumbnail,Name,
-  description&populate[2]=picture.image,name,description,
-  preview&populate[3]=coordinates.long,lat`;
-  
   const response = await axios.get(query);
   return response.data.data;
 }

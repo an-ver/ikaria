@@ -1,12 +1,3 @@
-.Home{
-    position: relative;
-    width: 10%;
-    height: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
 .home-content .home-heading {
     margin-top: 390px;
     position: absolute;
@@ -76,7 +67,7 @@
 
 .home-dl-card .card-list {
     max-width: 300px;
-    border: 1px solid hsl(0, 15%, 90%);
+    /* border: 1px solid hsl(0, 15%, 90%); */
     border-radius: 50px;
     box-shadow: 5px 5px 5px hsla(0, 0%, 0%, 0.1);
     display: inline-block;
@@ -125,4 +116,92 @@
 .home-content {
     position: relative;
     z-index: 2;
+}
+
+@media (max-width: 1000px) {
+
+    .header-content {
+        display: flex;
+        }
+    .home-content .home-heading {
+        margin-top: 430px;
+        font-size: 40px;
+    }
+
+    .home-content .home-heading2 {
+        margin-top: 500px;
+        font-size: 60px;
+    }
+
+    .home-content .home-description {
+        margin-top: 600px;
+        font-size: 20px;
+    }
+    .home-content .home-bar {
+        margin-top: 1050px;
+        position: absolute;
+        width: 100%;
+        background-image: linear-gradient(to right, rgb(133, 207, 197), rgb(89, 179, 129), rgb(235, 175, 13));
+    }
+}
+
+@media (max-width: 1000px) {
+
+    .header-content {
+        display: flex;
+    }
+
+    .home-content .home-heading {
+        margin-top: 430px;
+        font-size: 40px;
+        left: 30%;
+    }
+
+    .home-content .home-heading2 {
+        margin-top: 500px;
+        font-size: 60px;
+        left: 27%;
+    }
+
+    .home-content .home-description {
+        margin-top: 600px;
+        font-size: 20px;
+        left: 30%;
+    }
+
+    .home-content .home-bar {
+        margin-top: 1050px;
+        position: absolute;
+        width: 100%;
+        background-image: linear-gradient(to right, rgb(133, 207, 197), rgb(89, 179, 129), rgb(235, 175, 13));
+    }
+}
+
+@media (max-width: 480px) {
+
+    .header-content {
+        display: flex;
+    }
+
+    .home-content .home-heading {
+        margin-top: 430px;
+        font-size: 20px;
+    }
+
+    .home-content .home-heading2 {
+        margin-top: 500px;
+        font-size: 30px;
+    }
+
+    .home-content .home-description {
+        margin-top: 600px;
+        font-size: 10px;
+    }
+
+    .home-content .home-bar {
+        margin-top: 1050px;
+        position: absolute;
+        width: 100%;
+        background-image: linear-gradient(to right, rgb(133, 207, 197), rgb(89, 179, 129), rgb(235, 175, 13));
+    }
 }
