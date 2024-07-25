@@ -15,9 +15,9 @@ function Home() {
     <div>
       <>
         <BackgroundVideo />
+         <div className="home-transition"></div> 
         <div className="home-content">
           <h1 className="home-heading">Καλως ήρθατε στην Ικαρία</h1>
-
           <div className="home-dl-card">
             {data &&
               data

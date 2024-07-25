@@ -24,13 +24,12 @@
 
 .home-content .home-dl-card {
     background-image: url('../assets/images/ikaria-back2.jpg');
-    background-size: cover;
     background-repeat: no-repeat;
+    background-size: cover;
     background-attachment: fixed;
     width: 100%;
     position: absolute;
-    width: 100%;
-    margin: 900px 0px 0px 0px;
+    margin: 1058px 0px 0px 0px;
     padding: 14%;
     display: flex;
     flex-wrap: wrap;
@@ -73,4 +72,20 @@
     margin-bottom: 16px;
     text-align: center;
     text-transform: none;
+}
+
+.home-transition {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 250px;
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0) 0%,
+            rgb(0, 0, 0) 100%
+        );
+}
+
+.home-content {
+    position: relative;
+    z-index: 2;
 }
