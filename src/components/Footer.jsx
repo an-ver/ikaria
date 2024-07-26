@@ -4,7 +4,7 @@ import "../styles/Footer.css";
 function Footer() {
   return (
     <footer className="footer">
-      <p>© 2023 Your Company. All rights reserved.</p>
+      {/* <p>© 2023 Your Company. All rights reserved.</p> */}
       <div className="card">
         <a className="socialContainer containerOne" href="#">
           <svg viewBox="0 0 16 16" className="socialSvg instagramSvg">

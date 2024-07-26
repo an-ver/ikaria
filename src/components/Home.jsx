@@ -1,10 +1,8 @@
 import BackgroundVideo from "./BackgroundVideo";
 import "../styles/Home.css";
 import CreateCard from "./CreateCard";
-import React, { useState } from "react";
 import "../styles/Loader.css";
 import FetchData from "./FetchData.jsx";
-import Footer from "./Footer";
 
 function Home() {
   const { data, isLoading } = FetchData();
@@ -28,7 +26,6 @@ function Home() {
                 .map((item) => <CreateCard key={item.id} data={item} />)}
           </div>
         </div>
-        <Footer /> 
       </>
     </div>
   );

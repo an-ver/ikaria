@@ -9,6 +9,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./components/Home";
 import Info from "./components/Info";
 import About from "./components/About";
+import Layout from './components/Layout';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path="/info/:id" element={<Info />} /> 
           <Route path="/about" element = {<About/>}/>
         </Routes>
+        <Layout/>
       </div>
     </BrowserRouter>
   );

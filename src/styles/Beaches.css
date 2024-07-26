@@ -88,11 +88,11 @@
     background-color: #fff;
 }
 
-/* .beaches-cards .map-card:hover {
+.beaches-cards .map-card:hover {
     transform: scale(1.02) translateY(-10px);
     box-shadow: 0px 8px 16px rgba(10, 10, 10, 0.2);
     z-index: 10;
-} */
+}
 
 .beaches-cards .map-card .map-card-media {
     width: 100%;
@@ -158,39 +158,24 @@
 @media (max-width: 768px) {
 
     .beaches-cards {
-        /* display: flex; */
         overflow-x: auto;
-        /* scroll-snap-type: x mandatory; */
     }
 
     .beaches-cards .map-card {
         flex: 0 0 auto;
         width: 300px;
-        /* scroll-snap-align: start; */
         margin-right: 20px;
     }
-        /* .nav-button.left {
-            left: 10px;
-            z-index: 10;
-        } */
-
 }
 
 @media (max-width: 480px) {
     .beaches-cards {
-            /* display: flex; */
             overflow-x: auto;
-            /* scroll-snap-type: x mandatory; */
         }
     
         .beaches-cards .map-card {
             flex: 0 0 auto;
             width: 300px;
-            /* scroll-snap-align: start; */
             margin-right: 20px;
         }
-        /* .nav-button.left {
-            left: 10px;
-            z-index: 10;
-        } */
 }
