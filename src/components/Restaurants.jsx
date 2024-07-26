@@ -32,15 +32,11 @@ function Restaurants() {
     }
   }, [currentIndex, initialCardsCount]);
 
-  if (isLoading) {
-    return <div className="loader"></div>;
-  }
-
   const displayData =
     data && data.filter((item) => item.id >= 45 && item.id <= 54);
 
   if (isLoading) {
-        return <div className="loader"></div>
+    return <div className="loader"></div>;
   }
 
   return (

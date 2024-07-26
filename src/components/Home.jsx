@@ -1,7 +1,7 @@
 import BackgroundVideo from "./BackgroundVideo";
 import "../styles/Home.css";
 import CreateCard from "./CreateCard";
-import React,{useState} from "react";
+import React, { useState } from "react";
 import "../styles/Loader.css";
 import FetchData from "./FetchData.jsx";
 import Footer from "./Footer";
@@ -15,8 +15,8 @@ function Home() {
     <div>
       <>
         <BackgroundVideo />
-         <div className="home-transition"></div> 
-          <div className="home-content">
+        <div className="home-transition"></div>
+        <div className="home-content">
           <h1 className="home-heading">Καλως ήρθατε</h1>
           <h2 className="home-heading2"> στην Ικαρία</h2>
           <h3 className="home-description">Στο νησί της αιώνιας ζωής..</h3>

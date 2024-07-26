@@ -1,8 +1,8 @@
 .home-content .home-heading {
     margin-top: 390px;
     position: absolute;
-    left: 42%;
-    /* font-family: effra, cursive; */
+    left: 50%;
+    transform: translateX(-50%);
     font-optical-sizing: auto; 
     font-weight: 500;
     font-style: oblique;
@@ -13,10 +13,10 @@
 
 .home-content .home-heading2 {
     margin-top: 480px;
-    left: 40%; 
+    left: 50%;
+    transform: translateX(-50%);
     text-transform: none;
     position: absolute;
-    /* font-family: effra, cursive; */
     font-optical-sizing: auto; 
     font-weight: 500;
     font-style: oblique;
@@ -28,9 +28,9 @@
 .home-content .home-description {
     margin-top: 620px;
     position: absolute;
-    left: 43%;
+    left: 50%;
+    transform: translateX(-50%);
     text-transform: none;
-    /* font-family: effra, cursive; */
     font-optical-sizing: auto; 
     font-weight: 500;
     font-style: oblique;
@@ -39,18 +39,19 @@
     color: rgba(230, 209, 209, 0.815);
     text-shadow: 0.08em 0.08em 0.08em rgba(0, 0, 0, 0.4);}
 
-.home-content .home-bar {
-    margin-top: 1300px;
+/* .home-content .home-bar {
+    margin-top: 1050px;
     position: absolute;
     width: 100%;
     height: 60px;
     background-image: linear-gradient(to right, rgb(133, 207, 197), rgb(89, 179, 129), rgb(235, 175, 13));
 }
 
+ */
+
 .home-content .home-dl-card {
     background-image: url('../assets/images/ikaria-back2.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-repeat: no-repeat;    
     background-attachment: fixed;
     width: 100%;
     position: absolute;
@@ -71,7 +72,8 @@
     display: inline-block;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
- .home-dl-card .card-list:hover {
+
+.home-dl-card .card-list:hover {
     cursor: pointer;
     transform: scale(1.05);
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
@@ -85,7 +87,7 @@
 .home-dl-card .card-list .card-list-media .card-list-content {
     padding: 16px;
     text-transform: none;
-    
+
 }
 
 .home-dl-card .card-list .card-list-media .card-list-content .card-list-link {
@@ -104,102 +106,88 @@
     position: absolute;
     bottom: 0;
     width: 100%;
+    
     height: 250px;
     background: linear-gradient(to bottom,
             rgba(0, 0, 0, 0) 0%,
-            rgb(0, 0, 0) 100%
-        );
+            rgb(0, 0, 0) 100%);
 }
 
 .home-content {
     position: relative;
     z-index: 2;
 }
-
-@media (max-width: 1000px) {
-
-    .header-content {
-        display: flex;
-        }
+/* @media (max-width: 1200px) {
     .home-content .home-heading {
-        margin-top: 430px;
-        font-size: 40px;
+       
+        margin-top: 300px;
+   
     }
 
     .home-content .home-heading2 {
-        margin-top: 500px;
-        font-size: 60px;
+        
+        margin-top: 370px;
+
     }
 
     .home-content .home-description {
-        margin-top: 600px;
-        font-size: 20px;
-    }
-    .home-content .home-bar {
-        margin-top: 1050px;
-        position: absolute;
-        width: 100%;
-        background-image: linear-gradient(to right, rgb(133, 207, 197), rgb(89, 179, 129), rgb(235, 175, 13));
-    }
-}
+       
+            margin-top: 470px;
 
-@media (max-width: 1000px) {
-
-    .header-content {
-        display: flex;
     }
 
+    .home-dl-card {
+        padding: 10%;
+        margin: 1200px 0px 0px 0px;
+    }
+} */
+
+@media (max-width: 1200px) {
     .home-content .home-heading {
-        margin-top: 430px;
         font-size: 40px;
-        left: 30%;
+        margin-top: 390px;
+  
+       
     }
 
     .home-content .home-heading2 {
-        margin-top: 500px;
-        font-size: 60px;
-        left: 27%;
+        font-size: 70px;
+        margin-top: 480px;
+  
     }
 
     .home-content .home-description {
-        margin-top: 600px;
-        font-size: 20px;
-        left: 30%;
+        font-size: 26px;
+        margin-top: 620px;
+  
     }
 
-    .home-content .home-bar {
-        margin-top: 1050px;
-        position: absolute;
-        width: 100%;
-        background-image: linear-gradient(to right, rgb(133, 207, 197), rgb(89, 179, 129), rgb(235, 175, 13));
+    .home-dl-card {
+        padding: 8%;
+        margin: 1400px 0px 0px 0px;
     }
 }
 
-@media (max-width: 480px) {
-
-    .header-content {
-        display: flex;
-    }
-
-    .home-content .home-heading {
-        margin-top: 430px;
-        font-size: 20px;
-    }
-
-    .home-content .home-heading2 {
-        margin-top: 500px;
+@media (max-width: 768px) {
+    .home-content .home-heading {  
+        margin-top: 390px;
         font-size: 30px;
     }
 
-    .home-content .home-description {
-        margin-top: 600px;
-        font-size: 10px;
+    .home-content .home-heading2 {
+        margin-top: 450px;
+        font-size: 40px;
+
     }
 
-    .home-content .home-bar {
-        margin-top: 1050px;
-        position: absolute;
-        width: 100%;
-        background-image: linear-gradient(to right, rgb(133, 207, 197), rgb(89, 179, 129), rgb(235, 175, 13));
+    .home-content .home-description {
+        margin-top: 520px;
+        font-size: 16px;
+
+    }
+
+    .home-dl-card {
+        padding: 8%;
+        margin: 1400px 0px 0px 0px;
     }
 }
