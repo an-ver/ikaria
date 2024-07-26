@@ -147,43 +147,52 @@
     background-color: rgb(3, 50, 71);
     color: rgb(255, 255, 255);
 }
-@media (max-width: 768px) {
-
+@media (max-width: 1500px) {
     .villages-cards {
-        display: flex;
+        /* display: flex; */
         overflow-x: auto;
-        scroll-snap-type: x mandatory;
+        /* scroll-snap-type: x mandatory; */
     }
 
     .villages-cards .map-card {
         flex: 0 0 auto;
-        width: calc(100% - 40px);
-        scroll-snap-align: start;
+        width: 350px;
+        /* scroll-snap-align: start; */
         margin-right: 20px;
     }
 
-    .nav-button.left {
-        left: 10px;
-        z-index: 10;
+
+}
+@media (max-width: 1200px) {
+    .villages-cards {
+        /* display: flex; */
+        overflow-x: auto;
+        /* scroll-snap-type: x mandatory; */
     }
+
+    .villages-cards .map-card {
+        flex: 0 0 auto;
+        width: 350px;
+        /* scroll-snap-align: start; */
+        margin-right: 20px;
+    }
+
+
 }
 
-@media (max-width: 480px) {
+@media (max-width:  900px) {
     .villages-cards {
-        display: flex;
+        /* display: flex; */
         overflow-x: auto;
-        scroll-snap-type: x mandatory;
+        /* scroll-snap-type: x mandatory; */
     }
 
     .villages-cards .map-card {
         flex: 0 0 auto;
-        width: calc(100% - 40px);
-        scroll-snap-align: start;
+        width: 350px;
+        /* scroll-snap-align: start; */
         margin-right: 20px;
     }
 
-    .nav-button.left {
-        left: 10px;
-        z-index: 10;
-    }
+  
 }

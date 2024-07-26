@@ -8,7 +8,7 @@ import { FaArrowRight } from "react-icons/fa";
 function Restaurants() {
   const { data, isLoading } = FetchData();
   const [currentIndex, setCurrentIndex] = useState(0);
-  const initialCardsCount = 4;
+  const [cardsCount, setCardsCount] = useState(4);
   const scrollContainerRef = useRef(null);
 
   const handlePrev = () => {
@@ -22,15 +22,34 @@ function Restaurants() {
       setCurrentIndex(currentIndex + 1);
     }
   };
+  useEffect(() => {
+    const handleResize = () => {
+      const width = window.innerWidth;
+      if (width <= 630) {
+        setCardsCount(1);
+      } else if (width <= 1000) {
+        setCardsCount(2);
+      } else if (width <= 1500) {
+        setCardsCount(3);
+      } else {
+        setCardsCount(4);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+    handleResize(); // Set initial value
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   useEffect(() => {
     if (scrollContainerRef.current) {
       scrollContainerRef.current.style.scrollBehavior = "smooth";
       scrollContainerRef.current.scrollLeft =
-        (currentIndex * scrollContainerRef.current.offsetWidth) /
-        initialCardsCount;
+        (currentIndex * scrollContainerRef.current.offsetWidth) / cardsCount;
     }
-  }, [currentIndex, initialCardsCount]);
+  }, [currentIndex, cardsCount]);
 
   const displayData =
     data && data.filter((item) => item.id >= 45 && item.id <= 54);
@@ -50,7 +69,7 @@ function Restaurants() {
       </button>
       <dl className="restaurant-cards" ref={scrollContainerRef}>
         {displayData
-          .slice(currentIndex, currentIndex + initialCardsCount)
+          .slice(currentIndex, currentIndex + cardsCount)
           .map((item) => (
             <CreateRestaurantCard key={item.id} data={item} />
           ))}
@@ -59,7 +78,7 @@ function Restaurants() {
       <button
         onClick={handleNext}
         className="nav-button right"
-        disabled={currentIndex + initialCardsCount >= displayData.length}
+        disabled={currentIndex + cardsCount >= displayData.length}
         style={{ right: 0 }}
       >
         {<FaArrowRight />}
