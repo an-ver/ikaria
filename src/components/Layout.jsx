@@ -1,5 +1,5 @@
 import React from 'react';
-import Footer from './Footer'; // Adjust the path as necessary
+import Footer from './Footer';
 
 const Layout = ({ children }) => {
   return (
