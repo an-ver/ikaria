@@ -154,8 +154,7 @@
     animation: spin 2s linear infinite;
     margin: auto;
 }
-
-@media (max-width: 768px) {
+@media (max-width: 1500px) {
 
     .beaches-cards {
         overflow-x: auto;
@@ -166,9 +165,29 @@
         width: 300px;
         margin-right: 20px;
     }
+
+ 
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1200px) {
+
+    .beaches-cards {
+        /* display: flex; */
+        overflow-x: auto;
+        /* scroll-snap-type: x mandatory; */
+    }
+
+    .beaches-cards .map-card {
+        flex: 0 0 auto;
+        width: 300px;
+        /* scroll-snap-align: start; */
+        margin-right: 20px;
+    }
+    
+
+}
+
+@media (max-width:  900px) {
     .beaches-cards {
             overflow-x: auto;
         }
