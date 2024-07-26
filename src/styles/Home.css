@@ -118,32 +118,14 @@
     position: relative;
     z-index: 2;
 }
-/* @media (max-width: 1200px) {
-    .home-content .home-heading {
-       
-        margin-top: 300px;
-   
-    }
 
-    .home-content .home-heading2 {
-        
-        margin-top: 370px;
-
-    }
-
-    .home-content .home-description {
-       
-            margin-top: 470px;
-
-    }
-
-    .home-dl-card {
-        padding: 10%;
-        margin: 1200px 0px 0px 0px;
-    }
-} */
 
 @media (max-width: 1200px) {
+    .home-content .home-dl-card {
+        margin: 640px 0px 0px 0px;
+
+    }
+    
     .home-content .home-heading {
         font-size: 40px;
         margin-top: 390px;
@@ -168,17 +150,50 @@
         margin: 1400px 0px 0px 0px;
     }
 }
+@media (max-width: 1200px) {
+
+    .home-content .home-heading {
+        margin-top: 390px;
+        font-size: 40px;
+    }
+
+    .home-content .home-heading2 {
+        margin-top: 440px;
+        font-size: 45px;
+
+
+    }
+
+    .home-content .home-description {
+        margin-top: 520px;
+        font-size: 26px;
+
+    }
+
+    .home-dl-card {
+        padding: 8%;
+        margin: 1400px 0px 0px 0px;
+    }
+
+    .home-transition {
+        bottom: 250px;
+
+    }
+
+}
 
 @media (max-width: 768px) {
+ 
     .home-content .home-heading {  
         margin-top: 390px;
         font-size: 30px;
     }
 
     .home-content .home-heading2 {
-        margin-top: 450px;
+        margin-top: 440px;
         font-size: 40px;
 
+        
     }
 
     .home-content .home-description {
@@ -191,4 +206,63 @@
         padding: 8%;
         margin: 1400px 0px 0px 0px;
     }
+    .home-transition {
+        bottom: 250px;
+        
+    }
+
 }
+@media (max-width: 450px) {
+  
+    .home-content .home-heading {
+        margin-top: 390px;
+        font-size: 25px;
+    }
+
+    .home-content .home-heading2 {
+        margin-top: 430px;
+        font-size: 30px;
+
+
+    }
+
+    .home-content .home-description {
+        margin-top: 500px;
+        font-size: 14px;
+
+    }
+    .home-content .home-dl-card {
+        margin: 560px 0px 0px 0px;
+    
+    }
+
+    .home-transition {
+        bottom: 250px;
+    
+    }
+}
+/* @media (max-width: 330px) {
+
+    .home-content .home-heading {
+        margin-top: 390px;
+        font-size: 20px;
+    }
+
+    .home-content .home-heading2 {
+        margin-top: 430px;
+        font-size: 30px;
+
+
+    }
+
+    .home-content .home-description {
+        margin-top: 500px;
+        font-size: 13px;
+
+    }
+
+    .home-content .home-dl-card {
+        margin: 560px 0px 0px 0px;
+
+    }
+} */
