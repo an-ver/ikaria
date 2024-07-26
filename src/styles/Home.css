@@ -117,30 +117,6 @@
     position: relative;
     z-index: 2;
 }
-/* @media (max-width: 1200px) {
-    .home-content .home-heading {
-       
-        margin-top: 300px;
-   
-    }
-
-    .home-content .home-heading2 {
-        
-        margin-top: 370px;
-
-    }
-
-    .home-content .home-description {
-       
-            margin-top: 470px;
-
-    }
-
-    .home-dl-card {
-        padding: 10%;
-        margin: 1200px 0px 0px 0px;
-    }
-} */
 
 @media (max-width: 1200px) {
     .home-content .home-heading {
