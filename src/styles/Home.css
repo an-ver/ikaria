@@ -122,35 +122,9 @@
 
 @media (max-width: 1200px) {
     .home-content .home-dl-card {
-        margin: 640px 0px 0px 0px;
-
-    }
+            margin: 640px 0px 0px 0px;
     
-    .home-content .home-heading {
-        font-size: 40px;
-        margin-top: 390px;
-  
-       
-    }
-
-    .home-content .home-heading2 {
-        font-size: 70px;
-        margin-top: 480px;
-  
-    }
-
-    .home-content .home-description {
-        font-size: 26px;
-        margin-top: 620px;
-  
-    }
-
-    .home-dl-card {
-        padding: 8%;
-        margin: 1400px 0px 0px 0px;
-    }
-}
-@media (max-width: 1200px) {
+        }
 
     .home-content .home-heading {
         margin-top: 390px;
@@ -241,28 +215,3 @@
     
     }
 }
-/* @media (max-width: 330px) {
-
-    .home-content .home-heading {
-        margin-top: 390px;
-        font-size: 20px;
-    }
-
-    .home-content .home-heading2 {
-        margin-top: 430px;
-        font-size: 30px;
-
-
-    }
-
-    .home-content .home-description {
-        margin-top: 500px;
-        font-size: 13px;
-
-    }
-
-    .home-content .home-dl-card {
-        margin: 560px 0px 0px 0px;
-
-    }
-} */
