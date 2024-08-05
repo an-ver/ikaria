@@ -52,15 +52,6 @@
     box-shadow: none;
 }
 
-/* .title{
-    text-transform:none;
-    padding-top: 100px;
-    text-align: left;
-    color: #ffffff;
-    font-size: 3em;
-    
-} */
-
 .restaurant-cards {
     display:flex;
     flex-wrap: nowrap;
@@ -165,7 +156,18 @@
 .rating i {
     margin: 0 1px;
 }
-    	
+
+@media (max-width: 1500px) {
+    .restaurant-container {
+        padding: 1%;
+        border: 25px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .restaurant-container .restaurant-card {
+        width: 280px;
+        margin-bottom: 20px;
+    }
+
 @media (max-width: 1000px) {
     .restaurant-container {
         padding: 2%;
@@ -191,16 +193,7 @@
 
    
 }
-@media (max-width: 1500px) {
-    .restaurant-container {
-        padding: 1%;
-        border: 25px solid rgba(255, 255, 255, 0.3);
-    }
 
-    .restaurant-container .restaurant-card {
-        width: 280px;
-        margin-bottom: 20px;
-    }
 
 
 }

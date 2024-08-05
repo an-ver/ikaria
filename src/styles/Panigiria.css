@@ -103,3 +103,44 @@
      background-color: white;
      color: rgb(51, 7, 7);
  }
+@media (max-width: 1500px) {
+
+  .panigiria-cards {
+    overflow-x: auto;
+  }
+
+  .panigiria-cards .map-card {
+    flex: 0 0 auto;
+    width: 300px;
+    margin-right: 20px;
+  }
+
+}
+
+@media (max-width: 1200px) {
+
+  .panigiria-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: visible;
+  }
+  .panigiria-cards .map-card {
+    flex: 0 0 auto;
+    width: 300px;
+    margin-right: 20px 0;
+  }
+
+}
+
+@media (max-width: 900px) {
+  .panigiria-cards {
+    overflow-x: auto;
+  }
+
+  .panigiria-cards .map-card {
+    flex: 0 0 auto;
+    width: 300px;
+    margin-right: 20px 0;
+  }
+}

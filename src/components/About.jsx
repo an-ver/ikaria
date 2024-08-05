@@ -12,9 +12,14 @@ function About() {
     }
   return (
     <div className="cards-container"> 
-      <dl>
+      {/* <dl>
         {data && data.filter(item => item.id >= 55 && item.id <= 56)
           .map(item => <CreateAboutCard key={item.id} data={item}/>)}
+      </dl> */}
+      <dl>
+        {data && data
+          .filter(item => item.category === 'about-card')
+          .map(item => <CreateAboutCard key={item.id} data={item} />)}
       </dl>
     </div>
   );

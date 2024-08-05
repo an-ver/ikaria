@@ -8,7 +8,8 @@ export async function getQuery() {
   const query = `http://192.168.1.173:1337/api/places?/publicationState=
   preview&populate[1]=Description,Name,
   description&populate[2]=picture.image,name,description,
-  preview&populate[3]=coordinates.long,lat`;
+  preview&populate[3]=coordinates.long,lat
+  preview&populate[4]=category`;
   const response = await axios.get(query);
   return response.data.data;
 }

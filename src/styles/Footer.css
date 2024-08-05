@@ -1,7 +1,7 @@
 .footer {
     position: max-content;
     width: 100%;
-    background-color: rgba(158, 219, 77, 0.384);
+    background-color: rgba(205, 211, 129, 0.719);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,8 +17,8 @@
     max-height: 1px;
     background-color: rgba(238, 238, 238, 0.171);
     display: flex;
-    gap: 10px;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.055);
+    gap: 30px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0);
     flex-direction: row;
     border-radius: 5px;
 }
@@ -27,7 +27,7 @@
     width: 40px;
     height: 40px;
     border-radius: 5px;
-    background-color: rgb(8, 80, 80);
+    background-color: rgba(8, 80, 80, 0.705);
     display: flex;
     align-items: center;
     justify-content: center;
