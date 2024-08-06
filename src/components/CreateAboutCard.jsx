@@ -11,6 +11,7 @@ const CreateAboutCard = ({ data }) => {
         data.attributes.picture[0].image.data.attributes.url
       }
       description={data.attributes.Description} 
+      category={data.attributes.category}
     />
   );
 };

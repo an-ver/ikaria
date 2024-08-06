@@ -10,12 +10,13 @@ function Panigiria() {
     if (isLoading) {
         return <div className="loader"></div>
     }
-    
+   const displayData = data && data.filter(item => item.attributes.category === 'panigiri-card'); 
     return (
         <div className='panigiria-container'>
-            <dl className='panigiria-cards'>
-                {data && data.filter(item => item.id >= 6 && item.id <= 8)
-            .map(item => <CreateMapCard key={item.id} data={item}/>)}</dl>
+            <div className='panigiria-cards'> 
+                {displayData
+                .map(item => <CreateMapCard key={item.id} data={item} />)}
+            </div>
         </div>
        
     );

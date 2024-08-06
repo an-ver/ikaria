@@ -37,7 +37,7 @@ function Beaches() {
     };
 
     window.addEventListener("resize", handleResize);
-    handleResize(); // Set initial value
+    handleResize(); 
     return () => {
       window.removeEventListener("resize", handleResize);
     };
@@ -60,6 +60,7 @@ function Beaches() {
 
   return (
     <div className="beaches-container">
+      <h1>  </h1>
       <button
         onClick={handlePrev}
         className="nav-button left"

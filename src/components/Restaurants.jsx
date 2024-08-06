@@ -37,7 +37,7 @@ function Restaurants() {
     };
 
     window.addEventListener("resize", handleResize);
-    handleResize(); // Set initial value
+    handleResize(); 
     return () => {
       window.removeEventListener("resize", handleResize);
     };
@@ -52,7 +52,7 @@ function Restaurants() {
   }, [currentIndex, cardsCount]);
 
   const displayData =
-    data && data.filter((item) => item.id >= 45 && item.id <= 54);
+    data && data.filter((item) => item.attributes.category === 'restaurant-card');
 
   if (isLoading) {
     return <div className="loader"></div>;
@@ -67,13 +67,13 @@ function Restaurants() {
       >
         {<FaArrowLeft />}
       </button>
-      <dl className="restaurant-cards" ref={scrollContainerRef}>
+      <div className="restaurant-cards" ref={scrollContainerRef}>
         {displayData
           .slice(currentIndex, currentIndex + cardsCount)
           .map((item) => (
             <CreateRestaurantCard key={item.id} data={item} />
           ))}
-      </dl>
+      </div>
 
       <button
         onClick={handleNext}

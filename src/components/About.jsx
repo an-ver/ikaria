@@ -10,17 +10,12 @@ function About() {
     if (isLoading) {
         return <div className="loader"></div>
     }
+  const displayData = data && data.filter(item => item.attributes.category === 'about-card');
   return (
     <div className="cards-container"> 
-      {/* <dl>
-        {data && data.filter(item => item.id >= 55 && item.id <= 56)
-          .map(item => <CreateAboutCard key={item.id} data={item}/>)}
-      </dl> */}
-      <dl>
-        {data && data
-          .filter(item => item.category === 'about-card')
-          .map(item => <CreateAboutCard key={item.id} data={item} />)}
-      </dl>
+      <div>
+        {displayData.map(item => <CreateAboutCard key={item.id} data={item} />)}
+      </div>
     </div>
   );
 }

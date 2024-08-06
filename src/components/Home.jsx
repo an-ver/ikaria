@@ -9,6 +9,7 @@ function Home() {
   if (isLoading) {
     return <div className="loader"></div>;
   }
+  const displayData = data && data.filter(item => item.attributes.category === 'home-page-card');
   return (
     <div>
       <>
@@ -17,11 +18,11 @@ function Home() {
         <div className="home-content">
           <div className="home-bar"></div>
           <div className="home-dl-card">
-            {data &&
-              data
-                .filter((item) => item.id >= 2 && item.id <= 5)
-                .map((item) => <CreateCard key={item.id} data={item} />)}
-          </div>
+        <div className="home-dl-card">
+          {displayData
+            .map(item => <CreateCard key={item.id} data={item} />)}
+        </div>
+        </div>
         </div>
       </>
     </div>

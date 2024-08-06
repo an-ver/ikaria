@@ -37,7 +37,7 @@ function Villages() {
     };
 
     window.addEventListener("resize", handleResize);
-    handleResize(); // Set initial value
+    handleResize(); 
     return () => {
       window.removeEventListener("resize", handleResize);
     };
@@ -53,9 +53,10 @@ function Villages() {
   if (isLoading) {
     return <div className="loader"></div>;
   }
-
   const displayData =
-    data && data.filter((item) => item.id >= 16 && item.id <= 23);
+        data && data
+          .filter(item => item.attributes.category === 'village-card');
+    
 
   return (
     <div className="villages-container">

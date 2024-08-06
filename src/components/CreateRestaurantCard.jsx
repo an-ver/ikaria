@@ -15,6 +15,7 @@ const CreatRestaurantCard = ({ data }) => {
       }
       tripAdvisorUrl={data.attributes.Description}
       rating={rating}
+      category={data.attributes.category} 
     />
   );
 };

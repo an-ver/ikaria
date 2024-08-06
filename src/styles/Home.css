@@ -4,16 +4,17 @@
     background-attachment: fixed;
     background-size: cover;
     width: 100%;
-    padding: 12%;
+    padding: 8%;
     display: flex;
     flex-wrap: wrap;
-    gap: 50px;
+    gap: 60px;
     justify-content: center;
     z-index: 2;
 }
 
 .home-dl-card .card-list {
     max-width: 300px;
+    max-height: 680px;
     border-radius: 50px;
     box-shadow: 5px 5px 5px hsla(0, 0%, 0%, 0.1);
     display: inline-block;
@@ -37,18 +38,12 @@
 
 }
 
-.home-dl-card .card-list .card-list-media .card-list-content .card-list-link {
-    text-decoration: none;
-    color: inherit;
-}
-
 .home-dl-card .card-list .card-list-media .card-list-content .card-list-title {
     font-size: 1.25rem;
     margin-bottom: 16px;
     text-align: center;
     text-transform: none;
 }
-
 .home-transition {
     position: absolute;
     bottom: 0;
@@ -95,7 +90,7 @@
     .home-dl-card {
         margin: 0;
     }
-    
+
 }
 
 @media (max-width: 992px) {
