@@ -1,70 +1,46 @@
-# Getting Started with Create React App
+# Overview
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+An application that is designed to help you explore the beautiful island of Ikaria. Its purpose is to guide the user through its charming villages, stunning beaches, vibrant panigiria (events), and delicious restaurants. The app is built using React for the frontend and Strapi for the backend.
 
-## Available Scripts
+## API Checkpoints
 
-In the project directory, you can run:
+Villages: /xwria
+Beaches: /paralies
+Panigiria: /panigiria
+Restaurants: /estiatoria
+About: /about
+Info: /info/id
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Home page :
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Displays cards for Villages, Beaches, Panigiria, and Restaurants, each with a short description.
 
-### `npm test`
+### Panigiria, Beaches, Villages page:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Displays cards for either Villages, Beaches or Panigiria along with the name and an image of the place.
 
-### `npm run build`
+### Restaurants page
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Displays cards for Restaurants along with a picture and a 5-star review. When a card is pressed the user gets redirected to a tripadvisor page filled with detailed info about the place of choice.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Info page
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Displays detailed information about the place of choice along with multiple pictures, text and a map with pins.
 
-### `npm run eject`
+### About page
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Displays information about the developers and a button linked their github profiles.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Technologies Used
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Frontend: React, Leaflet
+Backend: Strapi
+Styling: CSS
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Developers Team
 
-## Learn More
+### Anastasia Varoucha
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Anna Diamadopoulou
