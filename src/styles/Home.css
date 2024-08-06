@@ -13,6 +13,7 @@
 }
 
 .home-dl-card .card-list {
+    /* flex: 1 1 0; */
     max-width: 300px;
     max-height: 680px;
     border-radius: 50px;
@@ -159,24 +160,44 @@
         margin: 600px 0px 0px 0px;
     }
 }
-
-@media (max-width: 450px) {
+@media (max-width: 500px) {
     .home-content .home-heading {
-        margin-top: 230px;
+        margin-top: 200px;
         font-size: 20px;
     }
 
     .home-content .home-heading2 {
         margin-top: 280px;
-        font-size: 25px;
+        font-size: 20px;
     }
 
     .home-content .home-description {
-        margin-top: 360px;
-        font-size: 18px;
+        margin-top: 280px;
+        font-size: 20px;
     }
 
     .home-dl-card {
-        margin: 600px 0px 0px 0px;
+        margin: 0;
+    }
+}
+
+@media (max-width: 450px) {
+    .home-content .home-heading {
+        margin-top: 200px;
+        font-size: 20px;
+    }
+
+    .home-content .home-heading2 {
+        margin-top: 280px;
+        font-size: 20px;
+    }
+
+    .home-content .home-description {
+        margin-top: 280px;
+        font-size: 20px;
+    }
+
+    .home-dl-card {
+        margin: 0;
     }
 }

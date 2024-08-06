@@ -12,7 +12,7 @@
     justify-content: center;
     position: relative;
     margin: auto;
-    border: 100px solid rgba(255, 255, 255, 0.5);
+    /* border: 100px solid rgba(255, 255, 255, 0.5); */
 }
 
 .beaches-description {

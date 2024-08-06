@@ -60,7 +60,7 @@ function Beaches() {
 
   return (
     <div className="beaches-container">
-      <h1>  </h1>
+
       <button
         onClick={handlePrev}
         className="nav-button left"
