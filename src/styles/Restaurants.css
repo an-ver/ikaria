@@ -74,9 +74,9 @@
 
 
 .restaurant-container .restaurant-card {
-    width: 280px;
-    height: 360px;
-    border-radius: 10px;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
     padding: 1.5rem;
     background: white;
     position: relative;
@@ -89,6 +89,7 @@
 
 .restaurant-card:hover {
     transform: translateY(20px);
+    /* box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.7); */
     cursor: pointer;
 }
 .restaurant-card:before {
@@ -123,6 +124,7 @@
 
 .restaurant-card .card-content {
     position: relative;
+    
     z-index: 3;
     opacity: 1;
     transform: translateY(0);
@@ -159,7 +161,6 @@
 @media (max-width: 1500px) {
     .restaurant-container {
         padding: 1%;
-        border: 25px solid rgba(255, 255, 255, 0.3);
     }
 
     .restaurant-container .restaurant-card {
@@ -170,7 +171,6 @@
 @media (max-width: 1000px) {
     .restaurant-container {
         padding: 2%;
-        border: 50px solid rgba(255, 255, 255, 0.5);
     }
 
     .restaurant-container .restaurant-card {
